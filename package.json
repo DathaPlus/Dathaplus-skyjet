@@ -1,11 +1,14 @@
 {
-  "name": "atlantis",
-  "version": "1.0.0",
+  "name": "@dataplus/atlantisv1",
+  "version": "0.0.0",
+  "license": "MIT",
   "private": true,
-  "description": "atlantis",
-  "author": "breiner",
+  "description": "atlantis skytjet elite",
+  "author": "dathaplus",
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "atlantis",
+    "dathaplus"
   ],
   "scripts": {
     "dev": "gatsby develop",
@@ -13,18 +16,40 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "husky": "husky install",
+    "staged": "lint-staged",
+    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
+    "format": "prettier -w --config ./.prettierrc"
   },
   "dependencies": {
     "@dathaplus/storybook": "^0.13.30-alpha.65.1",
     "gatsby": "^5.7.0",
+    "gatsby-plugin-alias-imports": "^1.0.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@commitlint/config-conventional": "^17.4.4",
+    "@commitlint/cli": "^17.4.4",
+    "@storybook/addon-actions": "^6.5.16",
+    "@types/flat": "^5.0.2",
     "@types/node": "^18.14.0",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
-    "typescript": "^4.9.5"
+    "@typescript-eslint/eslint-plugin": "^5.54.0",
+    "@typescript-eslint/parser": "^5.54.0",
+    "eslint": "^8.2.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.1.2",
+    "typescript": "^4.9.5",
+    "prettier": "^2.7.1"
   }
 }

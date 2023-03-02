@@ -1,0 +1,22 @@
+# DEBES ESCRIBIR LOS COMMITS DE LA SIGUIENTE MANERA
+#
+# [<JIRA-HISTORY>-<NUMBER-HISTORY>]/<TYPE>@<PRE-RELEASE>: <SUBJECT>
+#
+# TIPOS PERMITIDOS: 'feat', 'fix', 'rel', 'style' , 'docs' , 'test' , 'break'
+# PRE-RELEASE is Optional.
+#
+# feat: nueva caracteristica
+# fix: correcciones
+# rel: fusión de features con la release [se asigna base como etiqueta de prerelease]
+# break: BREAKING CHANGE -> cambios que pueden romper la libraria
+# docs: documentacion
+# style: estilos
+# test: pruebas
+#
+# EJEMPLO:
+#
+# [IS-120]/feat: Mi primer commit
+# [IS-120]/feat@beta: Mi primer commit con prerelease beta
+#
+# No se permiten mas de 100 caracteres para el titulo
+# No se permiten mas de 200 carateres por linea en el cuerpo del asunto.
