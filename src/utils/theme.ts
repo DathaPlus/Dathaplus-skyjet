@@ -53,6 +53,7 @@ export const theme: ITheme = {
     primary: {
       main: '#a8987e',
       hover: '#a8987e',
+      light: '#e4dfd7',
     },
     secondary: { main: '#0b2739', hover: '#a3adb4' },
     tertiary: {
