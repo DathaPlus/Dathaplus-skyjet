@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Text, ContainerWrapper } from '@dathaplus/storybook';
-import { ContainerFooter, WrapperFoot, descriptionText, headerText } from './styles';
+import { ContainerFooter, WrapperFoot, copyRight, descriptionText, headerText } from './styles';
 import { Link } from '@components/link';
 
 export const Footer = () => {
@@ -37,9 +37,7 @@ export const Footer = () => {
             text={{ ...descriptionText, children: 'Privacy Policy' }}
           />
         </Container>
-        <Text {...descriptionText} textDecoration="none" fontSize="14px" color="#d0c4af">
-          &copy; Skyjet Elite 2022
-        </Text>
+        <Text {...copyRight}>&copy; Skyjet Elite 2022</Text>
       </Container>
     </ContainerWrapper>
   );

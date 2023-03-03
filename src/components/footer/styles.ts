@@ -3,11 +3,10 @@ import { IContainerInterfaces, ITypogragpyInterfaces, size } from '@dathaplus/st
 export const ContainerFooter: IContainerInterfaces.IContainer = {
   tag: 'footer',
   styles: {
-    padding: '1.5em',
+    padding: '3em 1.5em',
     display: 'flex',
     flexDirection: 'column',
     gap: '1.7em',
-    paddingTop: '3em',
   },
 };
 
@@ -35,6 +34,13 @@ export const headerText: ITypogragpyInterfaces.ITypography = {
   styleTheme: 'gray.gray0',
   fontSize: '24px',
   lineHeight: '36px',
+  mediaQueryBreakPoints: {
+    [size.tabletM]: {
+      fontSize: '32px',
+      lineHeight: '48px',
+      marginBottom: '1em',
+    },
+  },
 };
 
 export const descriptionText: ITypogragpyInterfaces.ITypography = {
@@ -43,4 +49,19 @@ export const descriptionText: ITypogragpyInterfaces.ITypography = {
   lineHeight: '24px',
   styleTheme: 'primary.light',
   textDecoration: 'underline',
+  width: 'fit-content',
+  mediaQueryBreakPoints: {
+    [size.tabletM]: {
+      fontSize: '20px',
+      lineHeight: '30px',
+    },
+  },
+};
+
+export const copyRight: ITypogragpyInterfaces.ITypography = {
+  fontSize: '12px',
+  lineHeight: '30px',
+  styleTheme: 'primary.light',
+  marginTop: '1em',
+  color: '#d0c4af',
 };

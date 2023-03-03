@@ -6,7 +6,7 @@ export const Link: FC<
     text?: ITypogragpyInterfaces.ITypography;
   }
 > = ({ text, ...props }) => (
-  <a {...props} style={{ textDecoration: 'none' }}>
+  <a {...props} style={{ textDecoration: 'none', display: 'block', width: 'fit-content' }}>
     <Text {...text} />
   </a>
 );
