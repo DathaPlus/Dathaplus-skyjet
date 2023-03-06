@@ -1,8 +1,14 @@
 import React from 'react';
-import { CustomerInfo } from '@components/customer';
+import { Footer } from '@components/footer';
+import { Container } from '@dathaplus/storybook';
 
 const IndexPage = () => {
-  return <CustomerInfo />;
+  return (
+    <>
+      <Container styles={{ height: '90vh' }}></Container>
+      <Footer />
+    </>
+  );
 };
 
 export default IndexPage;
