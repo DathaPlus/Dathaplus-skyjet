@@ -7,7 +7,7 @@ export const gray: ITheme['gray'] = {
   gray300: '#b6b7b7',
   gray400: '#86888c',
   gray500: '#50535a',
-  gray600: '#313235',
+  gray600: '#2a2a2d',
 };
 
 export const theme: ITheme = {

@@ -1226,10 +1226,10 @@
   dependencies:
     "@jridgewell/trace-mapping" "0.3.9"
 
-"@dathaplus/storybook@^0.13.30-alpha.65.1":
-  version "0.13.30-alpha.65.1"
-  resolved "https://dathaplus.bytesafe.dev/r/dathaplus/-/pull/@dathaplus%2Fstorybook/0.13.30-alpha.65.1#76b871b769b43535b67ad0c5400926119e6f1e63"
-  integrity sha512-QU5jSk+V7zGgzXYbUYoTpORCL2dfPKIshuwBTwVBiVy/daEYaqS2wh7+YrXlomNTSpwCcvh+5+rxQvmIbwL1cw==
+"@dathaplus/storybook@^0.13.38-alpha.65.1":
+  version "0.13.38-alpha.65.1"
+  resolved "https://dathaplus.bytesafe.dev/r/dathaplus/-/pull/@dathaplus%2Fstorybook/0.13.38-alpha.65.1#1062b0d5806d82c5208e8b6d8960a6850b984267"
+  integrity sha512-b9a6ybODYK10hNhMoAyDu4gAKGE1ecYyudpk4O27Wp+8uvbBtgEptCcl5VX76lfXIMvHm0HfZGXbAk/JtyRdEg==
   dependencies:
     lodash "^4.17.21"
     styled-components "^5.3.6"
