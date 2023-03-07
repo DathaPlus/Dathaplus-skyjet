@@ -17,10 +17,10 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",
-    "husky": "husky install",
+    "postinstall": "husky install",
     "staged": "lint-staged",
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
-    "format": "prettier -w --config ./.prettierrc"
+    "format": "prettier -w \"./**/*.{ts,tsx,js,json,yml,yaml}\" --config ./.prettierrc"
   },
   "dependencies": {
     "@dathaplus/storybook": "^0.13.35-alpha.65",
@@ -49,7 +49,7 @@
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.1.2",
-    "prettier": "^2.7.1",
+    "prettier": "^2.8.4",
     "typescript": "^4.9.5"
   }
 }
