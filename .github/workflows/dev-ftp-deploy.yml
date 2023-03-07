@@ -10,6 +10,8 @@ env:
   FTP_ACCESS_SERVER_NAME: ${{secrets.FTP_SERVER_DEV}} # only IP
   FTP_ACCESS_USER: ${{secrets.FTP_USER_DEV}}
   FTP_ACCESS_PASSWORD: ${{secrets.FTP_PASS_DEV}}
+  NPM_REGISTRY: ${{ secrets.NPM_REGISTRY }}
+  NPM_REGISTRY_TOKEN: ${{ secrets.NPM_REGISTRY_TOKEN }}
 
 jobs:
   git-event:
@@ -28,6 +30,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: registry npm add file
+        run: printf "registry=https://$NPM_REGISTRY\n//$NPM_REGISTRY:_authToken=$NPM_REGISTRY_TOKEN\nalways-auth=true" >> ~/.npmrc | cat ~/.npmrc
       - name: Install dependencies
         run: yarn
       - name: Build
