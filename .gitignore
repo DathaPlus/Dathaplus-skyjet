@@ -6,4 +6,3 @@ src/gatsby-types.d.ts
 .sfdx
 .idea
 ./yarn-error.log
-./package-lock.json

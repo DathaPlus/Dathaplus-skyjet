@@ -33,7 +33,7 @@ jobs:
       - name: registry npm add file
         run: printf "registry=https://$NPM_REGISTRY\n//$NPM_REGISTRY:_authToken=$NPM_REGISTRY_TOKEN\nalways-auth=true" >> ~/.npmrc | cat ~/.npmrc
       - name: Install dependencies
-        run: yarn
+        run: yarn --ignore-scripts --frozen-lockfile
       - name: Build
         run: yarn build
       - uses: actions/setup-node@v2
