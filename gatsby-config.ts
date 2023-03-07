@@ -26,7 +26,17 @@ const config: GatsbyConfig = {
         extensions: ["js", "jsx", "ts", "tsx"],
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
+    },
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
   ],
-};
+}
 
 export default config;
