@@ -18,6 +18,7 @@ export const sectionStyles: IS.ISection = {
     fontSize: '18px',
     textAlign: 'center',
     marginTop: '1em',
+    marginBottom: '1em',
   },
 };
 
