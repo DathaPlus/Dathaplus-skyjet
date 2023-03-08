@@ -1,12 +1,10 @@
 import React from 'react';
-import { Footer } from '@components/footer';
-import { Container } from '@dathaplus/storybook';
+import { Header } from '@components/header';
 
 const IndexPage = () => {
   return (
     <>
-      <Container styles={{ height: '90vh' }}></Container>
-      <Footer />
+      <Header title="ABOUT US" subtitle="Discover SkyJet Elite" direction="vertical" />
     </>
   );
 };
