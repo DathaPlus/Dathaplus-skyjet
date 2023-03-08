@@ -45,6 +45,7 @@ export const containerCertificate: IC.IContainer = {
 
 export const imageContainer: IM.IImage = {
   height: '220px',
+  scrollAnimate: 'fadeInUp',
   styles: {
     height: '220px',
     maxWidth: '327px',
