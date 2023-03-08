@@ -1,12 +1,10 @@
 import React from 'react';
-import { Footer } from '@components/footer';
-import { Container } from '@dathaplus/storybook';
+import { Certification } from '@components/certification';
 
 const IndexPage = () => {
   return (
     <>
-      <Container styles={{ height: '90vh' }}></Container>
-      <Footer />
+      <Certification />
     </>
   );
 };
