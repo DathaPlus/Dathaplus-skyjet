@@ -1,6 +1,64 @@
-import React from "react";
-import {Navbar, Text} from "@dathaplus/storybook";
+import React from 'react';
+import { Navbar, Text } from '@dathaplus/storybook';
+import { textOption, textOptionButton, textOptionNested } from './styles';
 
-export const HeaderHero = () => {
-    return <Navbar logo={{src: './img/logo1.png', type: 'image'}} options={[{children: 'about us', fontFamily: 'Inter', fontWeight: 500, mediaQueryBreakPoints: [{color: 'white', fontWeight: 400}], options: [{children: 'aircraft management', fontFamily: 'Inter', fontWeight: 400, textTransform: 'uppercase', type: 'text', variant: 'caption2'}, {children: 'investment opportunities', fontFamily: 'Inter', fontWeight: 400, textTransform: 'uppercase', type: 'text', variant: 'caption2'}], textTransform: 'uppercase', type: 'text', variant: 'body4'}, {children: 'Maintenance', fontFamily: 'Inter', fontWeight: 500, mediaQueryBreakPoints: [{color: 'white', fontWeight: 400}], textTransform: 'uppercase', type: 'text', variant: 'body4'}, {children: 'contact us', fontFamily: 'Inter', fontWeight: 500, mediaQueryBreakPoints: [{color: 'white', fontWeight: 400}], textTransform: 'uppercase', type: 'text', variant: 'body4'}, {children: <Text fontFamily="Inter" fontWeight={400} mediaQueryBreakPoints={[{color: 'white !important'}]} textTransform="uppercase" variant="body4">Clients login</Text>, styles: {backgroundColor: 'transparent', borderRadius: 0, styleTheme: 'secondary', width: '100%'}, type: 'button'}, {children: <Text fontFamily="Inter" fontWeight={600} textTransform="uppercase" variant="body4">Request a quote</Text>, styles: {borderRadius: 0, width: '100%'}, type: 'button'}]}/>
-}
+export const HeaderHero = () => (
+  <Navbar
+    logo={{
+      src: '/img/logo1.webp',
+      alt: 'logo1',
+      type: 'image',
+    }}
+    options={[
+      {
+        ...textOption,
+        children: 'about us',
+        type: 'text',
+        options: [
+          {
+            ...textOptionNested,
+            type: 'text',
+            children: 'aircraft management',
+          },
+          {
+            ...textOptionNested,
+            type: 'text',
+            children: 'investment opportunities',
+          },
+        ],
+      },
+      {
+        ...textOption,
+        type: 'text',
+        children: 'Maintenance',
+      },
+      {
+        ...textOption,
+        type: 'text',
+        children: 'contact us',
+      },
+      {
+        type: 'button',
+        children: <Text {...textOptionButton}>Clients login</Text>,
+        styles: {
+          width: '100%',
+          borderRadius: 0,
+          styleTheme: 'secondary',
+          backgroundColor: 'transparent',
+        },
+      },
+      {
+        type: 'button',
+        children: (
+          <Text {...textOptionButton} fontWeight={600}>
+            Request a quote
+          </Text>
+        ),
+        styles: {
+          width: '100%',
+          borderRadius: 0,
+        },
+      },
+    ]}
+  />
+);

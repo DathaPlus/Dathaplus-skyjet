@@ -1,10 +1,12 @@
-/*import React from 'react';
-//import { asset, mainContainer, ourDedication, vision, wrapper, wrapperVision } from './style';
+import React from 'react';
+import { asset, mainContainer, ourDedication, vision, wrapper, wrapperVision } from './style';
 import { Carousel, CarouselModules, Container, Text } from '@dathaplus/storybook';
 import { CustomNavigation } from '@components/navegationCarousel';
 import { Testimonial } from '@components/testimonial';
 
 export const CustomerInfo = () => {
+  const ID_FRACTION = 'fractionInfoSlide';
+
   return (
     <>
       <Container {...mainContainer}>
@@ -27,7 +29,7 @@ export const CustomerInfo = () => {
           nextEl: '#next12',
         }}
         pagination={{
-          el: '#fractionInfoSlide',
+          el: `#${ID_FRACTION}`,
           type: 'fraction',
           renderBullet(index, className) {
             return '<span class="' + className + '">' + (index + 1) + '</span>';
@@ -35,7 +37,7 @@ export const CustomerInfo = () => {
         }}
         modules={[CarouselModules.Navigation, CarouselModules.Pagination]}
         Element={Testimonial}
-        ContainerEnd={<CustomNavigation id="12" />}
+        ContainerEnd={<CustomNavigation id="12" variant="one" idFraction={`${ID_FRACTION}`} />}
         data={[
           {
             testimonial: `"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
@@ -71,4 +73,4 @@ export const CustomerInfo = () => {
       />
     </>
   );
-};*/
+};

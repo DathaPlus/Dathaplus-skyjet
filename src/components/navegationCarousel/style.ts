@@ -2,21 +2,21 @@ import { size } from '@dathaplus/storybook';
 import { ITypography } from '@dathaplus/storybook/dist/interfaces/base/typograpy';
 import { IContainer } from '@dathaplus/storybook/dist/interfaces/layout/container';
 
-export const containerCarouselInfo: IContainer = {
+export const containerCarouselInfo = ({ variant }: any): IContainer => ({
   styles: {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
     gap: '1em',
-    padding: '1.5em',
+    padding: variant === 'one' ? '1.5em' : undefined,
     position: 'relative',
     mediaQueryBreakPoints: {
       [size.tabletL]: {
-        marginLeft: '20%',
+        marginLeft: variant === 'one' ? '20%' : undefined,
       },
     },
   },
-};
+});
 
 export const containerButtons: IContainer = {
   styles: {
@@ -41,6 +41,5 @@ export const infoStepperCarousel: ITypography = {
   fontFamily: 'Inter',
   fontSize: '18px',
   marginRight: '2em',
-  id: 'fractionInfoSlide',
   display: 'block',
 };
