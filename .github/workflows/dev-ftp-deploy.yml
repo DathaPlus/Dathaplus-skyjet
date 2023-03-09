@@ -36,9 +36,6 @@ jobs:
         run: yarn --ignore-scripts --frozen-lockfile
       - name: Build
         run: yarn build
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '18'
       - name: Deploy Action FTP
         uses: SamKirkland/FTP-Deploy-Action@4.2.0
         with:
