@@ -1,25 +1,12 @@
 import React from 'react';
-import { CustomerInfo } from '@components/customer';
-import { Footer } from '@components/footer';
-import { SEO } from '@components/seo';
-import Hero from '@components/hero/';
-import { Services } from '@components/sectionServices';
+import { Header } from '@components/header';
 
 export const IndexPage = () => {
   return (
     <>
-      <Hero />
-      <Services />
-      <CustomerInfo />
-      <Footer />
+      <Header title="ABOUT US" subtitle="Discover SkyJet Elite" direction="vertical" />
     </>
   );
 };
-
-export const Head = () => (
-  <SEO title="Home">
-    <meta name="description" content="home" />
-  </SEO>
-);
 
 export default IndexPage;
