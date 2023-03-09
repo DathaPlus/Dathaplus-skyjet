@@ -1,8 +1,10 @@
-import { size } from '@dathaplus/storybook';
-import { ITypography } from '@dathaplus/storybook/dist/interfaces/base/typograpy';
-import { IContainer } from '@dathaplus/storybook/dist/interfaces/layout/container';
+import {
+  size,
+  IContainerInterfaces as IC,
+  ITypogragpyInterfaces as IT,
+} from '@dathaplus/storybook';
 
-export const mainContainer: IContainer = {
+export const mainContainer: IC.IContainer = {
   styles: {
     display: 'flex',
     justifyContent: 'center',
@@ -11,7 +13,7 @@ export const mainContainer: IContainer = {
     mediaQueryBreakPoints: {
       [size.tabletM]: {
         backgroundImage:
-          "linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url('./img/world.png')",
+          "linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url('./img/world.webp')",
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'top center',
         backgroundSize: 'contain',
@@ -23,7 +25,7 @@ export const mainContainer: IContainer = {
   },
 };
 
-export const wrapper: IContainer = {
+export const wrapper: IC.IContainer = {
   styles: {
     padding: '1em',
     display: 'flex',
@@ -42,7 +44,7 @@ export const wrapper: IContainer = {
   },
 };
 
-export const textStylesBase: ITypography = {
+export const textStylesBase: IT.ITypography = {
   fontFamily: 'Inter',
   styleTheme: 'gray.gray600',
   textAlign: 'left',
@@ -50,7 +52,7 @@ export const textStylesBase: ITypography = {
   textTransform: 'uppercase',
 };
 
-export const asset: ITypography = {
+export const asset: IT.ITypography = {
   ...textStylesBase,
   fontWeight: 600,
   fontSize: '28px',
@@ -63,7 +65,7 @@ export const asset: ITypography = {
   },
 };
 
-export const ourDedication: ITypography = {
+export const ourDedication: IT.ITypography = {
   ...textStylesBase,
   styleTheme: 'primary',
   fontWeight: 500,
@@ -77,7 +79,7 @@ export const ourDedication: ITypography = {
   },
 };
 
-export const wrapperVision: IContainer = {
+export const wrapperVision: IC.IContainer = {
   styles: {
     width: '100%',
     display: 'flex',
@@ -91,7 +93,7 @@ export const wrapperVision: IContainer = {
   },
 };
 
-export const vision: ITypography = {
+export const vision: IT.ITypography = {
   ...textStylesBase,
   maxWidth: '239px',
   fontWeight: 400,
