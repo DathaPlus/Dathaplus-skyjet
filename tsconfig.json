@@ -10,8 +10,8 @@
       "@components/*": ["components/*"],
       "@utils/*": ["utils/*"],
       "@helpers/*": ["helpers/*"],
-      "@hooks/*": ["src/hooks/*"],
-      "@interfaces/*": ["src/interfaces/*"]
+      "@hooks/*": ["hooks/*"],
+      "@interfaces/*": ["interfaces/*"]
     },
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,

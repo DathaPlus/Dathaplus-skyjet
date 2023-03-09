@@ -1226,20 +1226,12 @@
   dependencies:
     "@jridgewell/trace-mapping" "0.3.9"
 
-<<<<<<< HEAD
-"@dathaplus/storybook@^0.13.35-alpha.65":
-  version "0.13.35-alpha.65"
-  resolved "https://dathaplus.bytesafe.dev/r/dathaplus/-/pull/@dathaplus%2Fstorybook/0.13.35-alpha.65#25f2dacdc44c462ffd65c5f5a3a62a7a0083d942"
-  integrity sha512-u2wPDZwgPfpibZYxN0xe4yfUycPg9cudVNI/g6QBR79iqCGNw0HueY/rsdgQOuuzDMcQECGiZSacsSHV0omSSA==
-=======
-"@dathaplus/storybook@^0.13.38-alpha.65.1":
-  version "0.13.38-alpha.65.1"
-  resolved "https://dathaplus.bytesafe.dev/r/dathaplus/-/pull/@dathaplus%2Fstorybook/0.13.38-alpha.65.1#1062b0d5806d82c5208e8b6d8960a6850b984267"
-  integrity sha512-b9a6ybODYK10hNhMoAyDu4gAKGE1ecYyudpk4O27Wp+8uvbBtgEptCcl5VX76lfXIMvHm0HfZGXbAk/JtyRdEg==
->>>>>>> release/base
+"@dathaplus/storybook@0.13.46-alpha.59":
+  version "0.13.46-alpha.59"
+  resolved "https://dathaplus.bytesafe.dev/r/dathaplus/-/pull/@dathaplus%2Fstorybook/0.13.46-alpha.59#805fe9ce102c4afb49e25100a24a1bc44fbeef62"
+  integrity sha512-KrxG4xLoG2PX+jgmUU98azcxeOOqYqLrKZg1uVwRY2n2EbXW3Idi7krwY4cH+QZsGObOi6zdN5oJEmgLm73i+g==
   dependencies:
     lodash "^4.17.21"
-    styled-components "^5.3.6"
     swiper "^9.0.5"
 
 "@emotion/is-prop-valid@^1.1.0":
@@ -9945,7 +9937,7 @@ style-loader@^2.0.0:
     loader-utils "^2.0.0"
     schema-utils "^3.0.0"
 
-styled-components@^5.3.6:
+styled-components@^5.3.8:
   version "5.3.8"
   resolved "https://dathaplus.bytesafe.dev/r/dathaplus/-/pull/styled-components/5.3.8#b92e2d10352dc9ecf3b1bc5d27c7500832dcf870"
   integrity sha512-6jQrlvaJQ16uWVVO0rBfApaTPItkqaG32l3746enNZzpMDxMvzmHzj8rHUg39bvVtom0Y8o8ZzWuchEXKGjVsg==
