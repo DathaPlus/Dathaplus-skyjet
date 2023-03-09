@@ -25,6 +25,7 @@ const AboutUs = () => {
           customer: {
             name: 'Jennie Smith',
             position: 'cargo',
+            img: '/img/asset1.webp',
           },
         })}
       />

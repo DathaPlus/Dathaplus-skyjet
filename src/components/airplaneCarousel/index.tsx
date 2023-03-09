@@ -26,7 +26,6 @@ import {
 
 export const AirPlaneCarousel: FC<IAirPlane> = ({ title, images, linkPhotos }) => {
   const ID = 'airplane_1';
-
   return (
     <ContainerWrapper>
       <Container {...mainContainer}>
@@ -38,7 +37,9 @@ export const AirPlaneCarousel: FC<IAirPlane> = ({ title, images, linkPhotos }) =
           <Carousel
             id={ID}
             Element={Image}
-            data={images.map((src) => ({ ...imgStyles, src }))}
+            data={images.map(
+              (src) => ({ ...imgStyles, src, alt: 'airplane', loading: 'lazy' } as any),
+            )}
             slidesPerView={1}
             navigation={{
               prevEl: `#prev_${ID}`,

@@ -47,11 +47,12 @@ export const wrapperImg: IC.IContainer = {
   },
 };
 
-export const imgProps: IM.IImage = {
-  src: '/img/asset1.webp',
+export const imgProps: Omit<IM.IImage, 'src'> = {
   alt: 'asset1',
+  width: '100%',
+  height: '100%',
   styles: {
-    width: '160px',
+    maxWidth: '160px',
     objectFit: 'cover',
     objectPosition: 'center',
     mediaQueryBreakPoints: {

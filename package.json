@@ -23,7 +23,7 @@
     "format": "prettier -w  \"./**/*.{ts,js,json,yml,yaml}\" --config ./.prettierrc"
   },
   "dependencies": {
-    "@dathaplus/storybook": "^0.14.71-alpha.65",
+    "@dathaplus/storybook": "^0.14.73-alpha.65",
     "gatsby": "^5.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

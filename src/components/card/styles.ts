@@ -9,6 +9,9 @@ import {
 export const imageStyles: Omit<IIM.IImage, 'src'> = {
   alt: 'business',
   scrollAnimate: 'fadeIn',
+  width: '100%',
+  height: '100%',
+  loading: 'lazy',
   styles: {
     width: '100%',
     maxHeight: '310px',

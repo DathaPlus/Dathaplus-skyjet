@@ -19,6 +19,8 @@ export const OurValues = () => {
         <Image
           {...imageProps}
           src={width < size.tabletL ? '/img/about_us_mobile.webp' : '/img/about_us.webp'}
+          alt="about"
+          loading="lazy"
         />
 
         <Container {...wrapperText}>

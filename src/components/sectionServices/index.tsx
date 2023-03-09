@@ -1,14 +1,15 @@
+import { InfoText } from '@components/infoText';
 import {
   Button,
   Container,
-  Text,
   ContainerWrapper,
   Image,
-  Section,
   InfoImage,
+  Section,
+  Text,
 } from '@dathaplus/storybook';
 import React from 'react';
-import { InfoText } from '@components/infoText';
+
 import {
   btnAircraft,
   imageAircraft,
@@ -95,7 +96,7 @@ export const Services = () => {
           }}
         />
 
-        <Image {...imageAircraft} src="/img/trust.webp" />
+        <Image {...imageAircraft} src="/img/trust.webp" loading="lazy" />
       </ContainerWrapper>
     </>
   );

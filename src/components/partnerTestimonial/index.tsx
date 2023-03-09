@@ -34,7 +34,7 @@ export const Testimonial: FC<ITestimonial & { id: string; fraction?: string }> =
       <Text {...titleProps}>partners testimonials</Text>
       <Container {...containerContent}>
         <Container {...wrapperImg}>
-          <Image {...imgProps} />
+          <Image {...imgProps} src={customer.img} alt="partner testimonial" loading="lazy" />
           <Container {...wrapperCustomer}>
             <Text {...customerName}>{customer.name}</Text>
             <Text {...customerPosition}>{customer.position}</Text>

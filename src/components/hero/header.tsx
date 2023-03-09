@@ -13,9 +13,11 @@ export const NavbarMenu = ({
   <Navbar
     logo={{
       src: `/img/${img}`,
-      alt: 'logo1',
+      alt: 'logo',
       type: 'image',
       href: '/',
+      width: '100%',
+      height: '100%',
     }}
     activateColorInTop={activateColorInTop}
     options={[

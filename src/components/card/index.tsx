@@ -17,7 +17,7 @@ export const Card: FC<ICard> = ({ title, description, button, img }) => {
   return (
     <ContainerWrapper margin="2em 0">
       <Container {...mainContainerCard}>
-        <Image {...imageStyles} src={img} />
+        <Image {...imageStyles} src={img} alt="card" />
         <Container {...wrapperContent}>
           <Text {...titleStyles}>{title}</Text>
           <Container {...wrapperDescription}>

@@ -20,7 +20,13 @@ const Certificate = ({
   delayAnimateImg?: IM.IImage['delayAnimate'];
 }) => (
   <Container {...containerCertificate}>
-    <Image {...imageContainer} src={img} delayAnimate={delayAnimateImg} />
+    <Image
+      {...imageContainer}
+      src={img}
+      delayAnimate={delayAnimateImg}
+      loading="lazy"
+      alt="partners"
+    />
     <LinkComponent {...linkProps} href={href} type="external" />
   </Container>
 );
