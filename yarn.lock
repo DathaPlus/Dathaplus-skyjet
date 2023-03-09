@@ -1244,10 +1244,10 @@
   dependencies:
     "@jridgewell/trace-mapping" "0.3.9"
 
-"@dathaplus/storybook@^0.13.57-alpha.65":
-  version "0.13.57-alpha.65"
-  resolved "https://dathaplus.bytesafe.dev/r/dathaplus/-/pull/@dathaplus%2Fstorybook/0.13.57-alpha.65#36f35336ca8ef9b4ff868b58506c316e1d6abd66"
-  integrity sha512-DKTnDqfuWkUy+bhjnqTe3BzCbm5nb+tNt1f8NECwJRC4s/eanGOkAxxJeD4mPKW+784Ez28IskY2BI50uDuvlw==
+"@dathaplus/storybook@^0.13.49-alpha.65":
+  version "0.13.49-alpha.65"
+  resolved "https://dathaplus.bytesafe.dev/r/dathaplus/-/pull/@dathaplus%2Fstorybook/0.13.49-alpha.65#7b44bee793194c63f043c7b0b1c3af6b4dfd8f8c"
+  integrity sha512-7onKQBD6AoUN7h8dHLVpS/NSCaS6VIxKsK9q6hvRvh7c5y+KN5aM9ZcoX89NG/qjBY+1tjr1P0GlEodNVTT9FA==
   dependencies:
     lodash "^4.17.21"
     swiper "^9.0.5"
