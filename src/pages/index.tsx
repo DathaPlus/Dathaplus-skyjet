@@ -1,7 +1,7 @@
 import React from 'react';
 import { Certification } from '@components/certification';
 
-const IndexPage = () => {
+export const IndexPage = () => {
   return (
     <>
       <Certification />
