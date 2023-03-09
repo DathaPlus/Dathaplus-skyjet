@@ -1,0 +1,54 @@
+name: (PROD) Deploy ftp
+
+on:
+  push:
+    branches:
+      - main/*
+
+env:
+  FTP_ACCESS_SERVER_NAME: ${{secrets.FTP_SERVER_PROD}} # only IP
+  FTP_ACCESS_USER: ${{secrets.FTP_USER_PROD}}
+  FTP_ACCESS_PASSWORD: ${{secrets.FTP_PASS_PROD}}
+  NPM_REGISTRY: ${{ secrets.NPM_REGISTRY }}
+  NPM_REGISTRY_TOKEN: ${{ secrets.NPM_REGISTRY_TOKEN }}
+
+jobs:
+  git-event:
+    name: Print git environment
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Printenv
+        run: printenv
+
+  publish-spa:
+    name: publish site
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: registry npm add file
+        run: printf "registry=https://$NPM_REGISTRY\n//$NPM_REGISTRY:_authToken=$NPM_REGISTRY_TOKEN\nalways-auth=true" >> ~/.npmrc | cat ~/.npmrc
+      - name: Install dependencies
+        run: yarn --ignore-scripts --frozen-lockfile
+      - name: Build
+        run: yarn build
+      - name: Deploy Action FTP
+        uses: SamKirkland/FTP-Deploy-Action@4.2.0
+        with:
+          server: ${{env.FTP_ACCESS_SERVER_NAME}}
+          username: ${{env.FTP_ACCESS_USER}}
+          password: ${{env.FTP_ACCESS_PASSWORD}}
+          local-dir: ./public/
+          server-dir: /
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/.idea/**
+            **/.vscode/**
+            **/.github/**
+            .gitignore
+            README.md

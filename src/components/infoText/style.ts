@@ -1,4 +1,5 @@
 import { IContainerInterfaces as IC, size } from '@dathaplus/storybook';
+
 import { IContainer } from '@dathaplus/storybook/dist/interfaces/layout/container';
 export const mainContainer = (direction: any): IC.IContainer => ({
   styles: {
@@ -13,11 +14,3 @@ export const mainContainer = (direction: any): IC.IContainer => ({
     },
   },
 });
-
-export const containerUno: IContainer = {
-  styles: {
-    display: 'flex',
-    justifyContent: 'center',
-    overflow: 'hidden',
-  },
-};

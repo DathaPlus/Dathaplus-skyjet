@@ -72,7 +72,8 @@ export const customerJob: ITypography = {
 };
 
 export const imgCustomer: IImage = {
-  src: './img/asset1.png',
+  src: './img/asset1.webp',
+  alt: 'asset1',
   width: '50%',
   scrollAnimate: 'fadeIn',
   styles: {
