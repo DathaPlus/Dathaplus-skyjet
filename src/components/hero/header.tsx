@@ -15,6 +15,7 @@ export const NavbarMenu = ({
       src: `/img/${img}`,
       alt: 'logo1',
       type: 'image',
+      href: '/',
     }}
     activateColorInTop={activateColorInTop}
     options={[
@@ -22,6 +23,7 @@ export const NavbarMenu = ({
         ...textOption,
         children: 'about us',
         type: 'text',
+        href: '/about',
         options: [
           {
             ...textOptionNested,
@@ -32,6 +34,7 @@ export const NavbarMenu = ({
             ...textOptionNested,
             type: 'text',
             children: 'investment opportunities',
+            href: '/about',
           },
         ],
       },
@@ -39,11 +42,13 @@ export const NavbarMenu = ({
         ...textOption,
         type: 'text',
         children: 'Maintenance',
+        href: '/maintenance',
       },
       {
         ...textOption,
         type: 'text',
         children: 'contact us',
+        href: '/contact',
       },
       {
         type: 'button',
