@@ -1,5 +1,5 @@
-import React from 'react';
-import { asset, mainContainer, ourDedication, vision, wrapper, wrapperVision } from './style';
+/*import React from 'react';
+//import { asset, mainContainer, ourDedication, vision, wrapper, wrapperVision } from './style';
 import { Carousel, CarouselModules, Container, Text } from '@dathaplus/storybook';
 import { CustomNavigation } from '@components/navegationCarousel';
 import { Testimonial } from '@components/testimonial';
@@ -71,4 +71,4 @@ export const CustomerInfo = () => {
       />
     </>
   );
-};
+};*/
