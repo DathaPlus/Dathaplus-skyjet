@@ -1,14 +1,22 @@
-import React from 'react';
 import { Navbar, Text } from '@dathaplus/storybook';
+import React from 'react';
+
 import { textOption, textOptionButton, textOptionNested } from './styles';
 
-export const HeaderHero = () => (
+export const NavbarMenu = ({
+  img = 'logo1.webp',
+  activateColorInTop,
+}: {
+  img?: string;
+  activateColorInTop?: boolean;
+}) => (
   <Navbar
     logo={{
-      src: '/img/logo1.webp',
+      src: `/img/${img}`,
       alt: 'logo1',
       type: 'image',
     }}
+    activateColorInTop={activateColorInTop}
     options={[
       {
         ...textOption,

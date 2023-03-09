@@ -1,5 +1,7 @@
-import { Container, Image, Section } from '@dathaplus/storybook';
+import { LinkComponent } from '@components/link';
+import { Container, IImageInterfaces as IM, Image, Section } from '@dathaplus/storybook';
 import React from 'react';
+
 import {
   containerCertificate,
   containerChildren,
@@ -7,12 +9,19 @@ import {
   linkProps,
   sectionStyles,
 } from './styles';
-import { Link } from '@components/link';
 
-const Certificate = ({ href, img }: { img?: string; href?: string }) => (
+const Certificate = ({
+  href,
+  img,
+  delayAnimateImg,
+}: {
+  img?: string;
+  href?: string;
+  delayAnimateImg?: IM.IImage['delayAnimate'];
+}) => (
   <Container {...containerCertificate}>
-    <Image {...imageContainer} src={img} />
-    <Link {...linkProps} href={href} />
+    <Image {...imageContainer} src={img} delayAnimate={delayAnimateImg} />
+    <LinkComponent {...linkProps} href={href} type="external" />
   </Container>
 );
 
@@ -21,8 +30,12 @@ export const Certification = () => {
     <Section {...sectionStyles}>
       <Container {...containerChildren}>
         <Certificate href="https://google.com" img="/img/flight_leader.webp" />
-        <Certificate href="https://google.com" img="/img/federal_aviation.webp" />
-        <Certificate href="https://google.com" img="/img/argus_cheq.webp" />
+        <Certificate
+          href="https://google.com"
+          img="/img/federal_aviation.webp"
+          delayAnimateImg="1s"
+        />
+        <Certificate href="https://google.com" img="/img/argus_cheq.webp" delayAnimateImg="2s" />
       </Container>
     </Section>
   );

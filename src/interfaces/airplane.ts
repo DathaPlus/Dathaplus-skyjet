@@ -1,7 +1,5 @@
-import { ITypogragpyInterfaces } from '@dathaplus/storybook';
-
 export interface IAirPlane {
-  title: ITypogragpyInterfaces.ITypography;
+  title: string;
   images: Array<string>;
   linkPhotos?: string;
 }

@@ -34,7 +34,10 @@ export const wrapperText = ({ direction }: Pick<IHeader, 'direction'>): IC.ICont
         gap: '2em',
         flexDirection: direction === 'horizontal' ? 'row' : 'column',
         alignItems: direction === 'horizontal' ? 'center' : undefined,
-        marginLeft: '15%',
+        marginLeft: '18%',
+      },
+      [size.desktopS]: {
+        marginLeft: '22%',
       },
     },
   },

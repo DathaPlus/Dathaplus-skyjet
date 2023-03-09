@@ -1,7 +1,8 @@
-import { Container, ContainerWrapper, Text } from '@dathaplus/storybook';
-import React, { FC } from 'react';
-import { infoStyles, mainContainer, titleStyles, wrapperText } from './style';
+import { Container, Text } from '@dathaplus/storybook';
 import { IHeader } from '@interfaces/header';
+import React, { FC } from 'react';
+
+import { infoStyles, mainContainer, titleStyles, wrapperText } from './style';
 
 export const Header: FC<IHeader> = ({ direction = 'horizontal', title, subtitle }) => (
   <Container {...mainContainer({ direction })}>

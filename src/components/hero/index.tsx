@@ -1,7 +1,8 @@
 import { Hero } from '@dathaplus/storybook';
 import React from 'react';
+
 import { BodyHero } from './body';
-import { HeaderHero } from './header';
+import { NavbarMenu } from './header';
 import { heroBaseStyles } from './styles';
 
 export const HeroComponent = () => (
@@ -10,7 +11,7 @@ export const HeroComponent = () => (
     body={{
       info: <BodyHero />,
     }}
-    header={<HeaderHero />}
+    header={<NavbarMenu />}
   />
 );
 

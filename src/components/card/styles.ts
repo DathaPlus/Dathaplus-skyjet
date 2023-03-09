@@ -1,15 +1,14 @@
 import {
-  IImageInterfaces as IIM,
-  IContainerInterfaces as IC,
   IButtonInterfaces as IB,
+  IContainerInterfaces as IC,
+  IImageInterfaces as IIM,
   ITypogragpyInterfaces as IT,
   size,
 } from '@dathaplus/storybook';
 
-export const imageStyles: IIM.IImage = {
-  src: './img/business.webp',
+export const imageStyles: Omit<IIM.IImage, 'src'> = {
   alt: 'business',
-  scrollAnimate: 'fadeInUp',
+  scrollAnimate: 'fadeIn',
   styles: {
     width: '100%',
     maxHeight: '310px',
@@ -46,6 +45,8 @@ export const wrapperContent: IC.IContainer = {
       [size.tabletS]: {
         padding: '1em 1em 1em 2em',
         justifyContent: 'center',
+        border: 'solid #E4DFD7 1px',
+        borderLeft: 'unset',
       },
     },
   },
