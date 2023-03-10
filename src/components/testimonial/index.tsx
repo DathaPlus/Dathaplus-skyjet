@@ -1,6 +1,7 @@
-import React, { FC } from 'react';
 import { Container, Image, Text } from '@dathaplus/storybook';
 import { ITestimonial } from '@interfaces/testimonial';
+import React, { FC } from 'react';
+
 import {
   citeTestimonial,
   containerCarousel,
@@ -20,7 +21,7 @@ export const Testimonial: FC<ITestimonial> = ({ testimonial, customer }) => {
         </Container>
 
         <Container {...wrapperCustomerInfo}>
-          <Image {...imgCustomer} />
+          <Image {...imgCustomer} loading="lazy" />
           <Container>
             <Text {...customerName}>{customer.name}</Text>
             <Text {...customerJob}>{customer.position}</Text>

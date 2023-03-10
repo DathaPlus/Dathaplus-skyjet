@@ -1,6 +1,7 @@
-import { Container, Text } from '@dathaplus/storybook';
-import React from 'react';
+import React, { FC } from 'react';
 import { ButtonCarousel } from '@components/buttonCarousel';
+import { Container, Text } from '@dathaplus/storybook';
+import { INavigation } from '@interfaces/navigation';
 import {
   containerButtons,
   containerCarouselInfo,
@@ -8,15 +9,15 @@ import {
   wapperInfoStepper,
 } from './style';
 
-export const CustomNavigation = ({ id }: { id: string }) => {
+export const CustomNavigation: FC<INavigation> = ({ id, variant, idFraction }) => {
   return (
-    <Container {...containerCarouselInfo}>
+    <Container {...containerCarouselInfo({ variant })}>
       <Container {...containerButtons}>
-        <ButtonCarousel disabled id={id} />
-        <ButtonCarousel direction="right" id={id} />
+        <ButtonCarousel disabled id={`prev${id}`} />
+        <ButtonCarousel direction="right" id={`next${id}`} />
       </Container>
       <Container {...wapperInfoStepper}>
-        <Text {...infoStepperCarousel} />
+        <Text {...infoStepperCarousel} id={idFraction} />
       </Container>
     </Container>
   );
