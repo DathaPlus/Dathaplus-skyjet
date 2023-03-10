@@ -7,3 +7,5 @@ src/gatsby-types.d.ts
 .sfdx
 public/*
 !public/img
+.idea
+./yarn-error.log
