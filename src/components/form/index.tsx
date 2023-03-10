@@ -23,7 +23,7 @@ export const Form = () => {
       {
         ({handleSubmit, values, handleChange}) => (
           <Container {...containerForm}>
-            <Text>Complete the form</Text>
+            <Text fontSize="2rem" paddingBottom="0.8rem" entranceAnimate="fadeIn">Complete the form</Text>
             <form onSubmit={handleSubmit}>
               <InputField {...inputForm} placeholder="Full Name" name="full_name" value={values.full_name} onChange={handleChange}  />
               <InputField {...inputForm} placeholder="Email" name="email" value={values.email} onChange={handleChange}/>
@@ -40,7 +40,7 @@ export const Form = () => {
                 <InputField {...inputForm} margin="0" placeholder="Zip Code" name="zip_code" value={values.zip_code} onChange={handleChange}/>
               </Container>
               <InputField {...inputForm} placeholder="Your Itinerary" name="itinerary" value={values.itinerary} onChange={handleChange}/>
-              <Button actions={{type: "submit"}} >Submit</Button>
+              <Button actions={{type: "submit"}} styles={{borderRadius: "0" }}><b>Submit</b></Button>
             </form>
           </Container>
         )

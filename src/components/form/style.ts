@@ -5,7 +5,6 @@ import {ISelectField} from "@dathaplus/storybook/dist/interfaces/form/select";
 
 export const containerForm: IContainer = {
   styles: {
-    // @ts-ignore
     padding: "1rem 2rem"
   }
 }
@@ -29,7 +28,6 @@ export const containerState: IContainer = {
     margin: "0.5rem 0",
     mediaQueryBreakPoints: {
       [size.tabletL]: {
-        // @ts-ignore
         flexDirection: "row",
         justifyContent: "space-between",
       }

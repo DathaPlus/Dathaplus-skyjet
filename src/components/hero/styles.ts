@@ -79,7 +79,7 @@ export const textOption: Omit<IT.ITypography, 'children'> = {
   mediaQueryBreakPoints: {
     [size.tabletL]: {
       fontWeight: 400,
-      color: 'white',
+      color: 'black',
     },
   },
 };
@@ -96,7 +96,7 @@ export const textOptionButton: Omit<IT.ITypography, 'children'> = {
   variant: 'body4',
   mediaQueryBreakPoints: {
     [size.tabletL]: {
-      color: 'white !important',
+      color: 'black !important',
     },
   },
 };
