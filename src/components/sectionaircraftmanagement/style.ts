@@ -7,17 +7,24 @@ export const mainContainer: IC.IContainer = {
     display: 'flex',
     flexDirection: 'column',
     gap: '10px',
-    padding: '1.5em',
+    padding: '15px 0',
     justifyContent: 'center',
+    maxWidth: '920px',
+    borderBottom: 'solid #F5F3F1 1px',
+    margin: '10px 16px',
     mediaQueryBreakPoints: {
       500: {
         alignItems: 'center',
+        margin: 'auto',
+        padding: '10px 0',
+        borderBottom: 'unset',
       },
       1000: {
         gap: '30px',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        padding: '1.5em 150px',
+        borderBottom: 'solid #F5F3F1 1px',
+        padding: '30px 0',
       },
     },
   },
@@ -100,6 +107,16 @@ export const textInfo: ITypogragpyInterfaces.ITypography = {
   color: '#2A2A2D',
   display: 'block',
   maxWidth: '445px',
+  mediaQueryBreakPoints: {
+    500: {
+      borderBottom: 'solid #F5F3F1 1px',
+      padding: '25px',
+    },
+    1000: {
+      borderBottom: 'unset',
+      padding: '15px',
+    },
+  },
 };
 
 export const containerUno: IContainer = {
