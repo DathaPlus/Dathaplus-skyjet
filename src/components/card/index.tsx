@@ -1,5 +1,7 @@
+import { Button, Container, ContainerWrapper, Image, Text } from '@dathaplus/storybook';
+import { ICard } from '@interfaces/card';
 import React, { FC } from 'react';
-import { Container, ContainerWrapper, Image, Text, Button } from '@dathaplus/storybook';
+
 import {
   buttonStyles,
   buttonTextStyles,
@@ -10,13 +12,12 @@ import {
   wrapperContent,
   wrapperDescription,
 } from './styles';
-import { ICard } from '@interfaces/card';
 
-export const Card: FC<ICard> = ({ title, description, button }) => {
+export const Card: FC<ICard> = ({ title, description, button, img }) => {
   return (
-    <ContainerWrapper>
+    <ContainerWrapper margin="2em 0">
       <Container {...mainContainerCard}>
-        <Image {...imageStyles} />
+        <Image {...imageStyles} src={img} alt="card" />
         <Container {...wrapperContent}>
           <Text {...titleStyles}>{title}</Text>
           <Container {...wrapperDescription}>

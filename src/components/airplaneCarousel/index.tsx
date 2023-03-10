@@ -1,42 +1,45 @@
-import React, { FC } from 'react';
+import { ButtonCarousel } from '@components/buttonCarousel';
+import { LinkComponent } from '@components/link';
 import {
-  Container,
-  Image,
-  Text,
   Carousel,
   CarouselModules,
+  Container,
   ContainerWrapper,
+  Image,
+  Text,
 } from '@dathaplus/storybook';
 import { IAirPlane } from '@interfaces/airplane';
+import React, { FC } from 'react';
+
 import {
   containerSectionButtons,
   fractionCarousel,
   imgStyles,
   linkAllPhotosStyles,
   mainContainer,
+  titleStyles,
   wrapperButtons,
   wrapperCarousel,
   wrapperFractionCarousel,
   wrapperTitle,
 } from './style';
-import { ButtonCarousel } from '@components/buttonCarousel';
-import { Link } from '@components/link';
 
-export const AirPlaneCarousel: FC<IAirPlane> = ({ title, images }) => {
+export const AirPlaneCarousel: FC<IAirPlane> = ({ title, images, linkPhotos }) => {
   const ID = 'airplane_1';
-
   return (
     <ContainerWrapper>
       <Container {...mainContainer}>
         <Container {...wrapperTitle}>
-          <Text {...title} />
+          <Text {...titleStyles}>{title}</Text>
         </Container>
 
         <Container {...wrapperCarousel}>
           <Carousel
             id={ID}
             Element={Image}
-            data={images.map((src) => ({ ...imgStyles, src }))}
+            data={images.map(
+              (src) => ({ ...imgStyles, src, alt: 'airplane', loading: 'lazy' } as any),
+            )}
             slidesPerView={1}
             navigation={{
               prevEl: `#prev_${ID}`,
@@ -59,7 +62,12 @@ export const AirPlaneCarousel: FC<IAirPlane> = ({ title, images }) => {
                 <Container {...wrapperFractionCarousel}>
                   <Text {...fractionCarousel(ID)} />
                 </Container>
-                <Link text={linkAllPhotosStyles} />
+                <LinkComponent
+                  text={linkAllPhotosStyles}
+                  type="external"
+                  href={linkPhotos}
+                  target="_blank"
+                />
               </Container>
             }
           />
