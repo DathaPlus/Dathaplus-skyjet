@@ -3,5 +3,6 @@ export interface ITestimonial {
   customer: {
     name: string;
     position?: string;
+    img?: string;
   };
 }

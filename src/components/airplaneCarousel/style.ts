@@ -10,8 +10,8 @@ export const mainContainer: IContainerInterfaces.IContainer = {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'flex-start',
-    gap: '1em',
-    padding: '1em',
+    gap: '2em',
+    margin: '2em 0',
     mediaQueryBreakPoints: {
       [size.tabletM]: {
         flexDirection: 'row',
@@ -27,6 +27,23 @@ export const wrapperTitle: IContainerInterfaces.IContainer = {
       [size.tabletM]: {
         width: '40%',
       },
+    },
+  },
+};
+
+export const titleStyles: ITypogragpyInterfaces.ITypography = {
+  fontFamily: 'Inter',
+  fontWeight: 300,
+  fontSize: '32px',
+  lineHeight: '39px',
+  display: 'block',
+  scrollAnimate: 'fadeIn',
+  mediaQueryBreakPoints: {
+    [size.tabletM]: {
+      width: '280px',
+      fontSize: '38px',
+      lineHeight: '58px',
+      marginLeft: '1.5em',
     },
   },
 };
@@ -96,6 +113,7 @@ export const fractionCarousel = (id?: string): ITypogragpyInterfaces.ITypography
   display: 'block',
   width: 'fit-content',
   children: '1/6',
+  whiteSpace: 'nowrap',
 });
 
 export const linkAllPhotosStyles: ITypogragpyInterfaces.ITypography = {

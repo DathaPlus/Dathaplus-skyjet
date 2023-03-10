@@ -1,7 +1,8 @@
+import { LinkComponent } from '@components/link';
+import { Container, ContainerWrapper, Text } from '@dathaplus/storybook';
 import React from 'react';
-import { Container, Text, ContainerWrapper } from '@dathaplus/storybook';
+
 import { ContainerFooter, WrapperFoot, copyRight, descriptionText, headerText } from './styles';
-import { Link } from '@components/link';
 
 export const Footer = () => {
   return (
@@ -17,23 +18,26 @@ export const Footer = () => {
 
           <Container>
             <Text {...headerText}>Contact US</Text>
-            <Link
+            <LinkComponent
               href="https://google.com"
               target="__black"
+              type="external"
               text={{ ...descriptionText, children: '+1 (954) 399 - 9589' }}
             />
           </Container>
         </Container>
 
         <Container styles={{ marginTop: '1.5em' }}>
-          <Link
+          <LinkComponent
             href="https://google.com"
             target="__black"
+            type="external"
             text={{ ...descriptionText, children: 'Terms of service' }}
           />
-          <Link
+          <LinkComponent
             href="https://google.com"
             target="__black"
+            type="external"
             text={{ ...descriptionText, children: 'Privacy Policy' }}
           />
         </Container>

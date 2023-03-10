@@ -1,19 +1,31 @@
-import React from 'react';
 import { Navbar, Text } from '@dathaplus/storybook';
+import React from 'react';
+
 import { textOption, textOptionButton, textOptionNested } from './styles';
 
-export const HeaderHero = () => (
+export const NavbarMenu = ({
+  img = 'logo1.webp',
+  activateColorInTop,
+}: {
+  img?: string;
+  activateColorInTop?: boolean;
+}) => (
   <Navbar
     logo={{
-      src: '/img/logo1.webp',
-      alt: 'logo1',
+      src: `/img/${img}`,
+      alt: 'logo',
       type: 'image',
+      href: '/',
+      width: '100%',
+      height: '100%',
     }}
+    activateColorInTop={activateColorInTop}
     options={[
       {
         ...textOption,
         children: 'about us',
         type: 'text',
+        href: '/about',
         options: [
           {
             ...textOptionNested,
@@ -24,6 +36,7 @@ export const HeaderHero = () => (
             ...textOptionNested,
             type: 'text',
             children: 'investment opportunities',
+            href: '/about',
           },
         ],
       },
@@ -31,11 +44,13 @@ export const HeaderHero = () => (
         ...textOption,
         type: 'text',
         children: 'Maintenance',
+        href: '/maintenance',
       },
       {
         ...textOption,
         type: 'text',
         children: 'contact us',
+        href: '/contact',
       },
       {
         type: 'button',

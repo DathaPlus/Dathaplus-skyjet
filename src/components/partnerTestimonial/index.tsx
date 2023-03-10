@@ -1,25 +1,26 @@
-import React, { FC, useEffect, useState } from 'react';
 import { CustomNavigation } from '@components/navegationCarousel';
-import { ITestimonial } from '@interfaces/testimonial';
 import {
+  Carousel,
+  CarouselModules,
   Container,
   ContainerWrapper,
   Image,
   Text,
-  Carousel,
-  CarouselModules,
 } from '@dathaplus/storybook';
+import { ITestimonial } from '@interfaces/testimonial';
+import React, { FC, useEffect, useState } from 'react';
+
 import {
+  containerContent,
   customerName,
   customerPosition,
+  fractionTestimonial,
   imgProps,
-  containerContent,
   testimonialMessage,
   titleProps,
   wrapperCustomer,
   wrapperImg,
   wrapperNavigation,
-  fractionTestimonial,
 } from './styles';
 
 export const Testimonial: FC<ITestimonial & { id: string; fraction?: string }> = ({
@@ -33,7 +34,7 @@ export const Testimonial: FC<ITestimonial & { id: string; fraction?: string }> =
       <Text {...titleProps}>partners testimonials</Text>
       <Container {...containerContent}>
         <Container {...wrapperImg}>
-          <Image {...imgProps} />
+          <Image {...imgProps} src={customer.img} alt="partner testimonial" loading="lazy" />
           <Container {...wrapperCustomer}>
             <Text {...customerName}>{customer.name}</Text>
             <Text {...customerPosition}>{customer.position}</Text>
@@ -63,7 +64,7 @@ export const PartnerTestimonial: FC<{ data: ITestimonial[] }> = ({ data }) => {
   }, [activeSlide, totalSlide]);
 
   return (
-    <ContainerWrapper padding="1em">
+    <ContainerWrapper padding="1em" margin="3em 0">
       <Carousel
         onInit={({ activeIndex }) => setActiveSlide(activeIndex)}
         onSlideChange={({ activeIndex }) => setActiveSlide(activeIndex)}

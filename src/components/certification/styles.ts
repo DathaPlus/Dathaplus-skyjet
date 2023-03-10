@@ -1,7 +1,7 @@
 import {
-  ISectionInterfaces as IS,
   IContainerInterfaces as IC,
   IImageInterfaces as IM,
+  ISectionInterfaces as IS,
 } from '@dathaplus/storybook';
 import { ILink } from 'interfaces/link';
 
@@ -45,10 +45,11 @@ export const containerCertificate: IC.IContainer = {
 };
 
 export const imageContainer: IM.IImage = {
-  height: '220px',
+  height: '100%',
+  width: '100%',
   scrollAnimate: 'fadeInUp',
   styles: {
-    height: '220px',
+    maxHeight: '220px',
     maxWidth: '327px',
     display: 'block',
   },

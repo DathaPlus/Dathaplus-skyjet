@@ -1,7 +1,7 @@
 import {
-  ITypogragpyInterfaces as IT,
   IContainerInterfaces as IC,
   IImageInterfaces as IM,
+  ITypogragpyInterfaces as IT,
   size,
 } from '@dathaplus/storybook';
 
@@ -21,8 +21,8 @@ export const containerContent: IC.IContainer = {
   styles: {
     display: 'flex',
     flexDirection: 'column',
-    gap: '1em',
-    marginTop: '2em',
+    gap: '2em',
+    marginTop: '2.5em',
     mediaQueryBreakPoints: {
       [size.tabletS]: {
         flexDirection: 'row',
@@ -47,11 +47,12 @@ export const wrapperImg: IC.IContainer = {
   },
 };
 
-export const imgProps: IM.IImage = {
-  src: '/img/asset1.webp',
+export const imgProps: Omit<IM.IImage, 'src'> = {
   alt: 'asset1',
+  width: '100%',
+  height: '100%',
   styles: {
-    width: '160px',
+    maxWidth: '160px',
     objectFit: 'cover',
     objectPosition: 'center',
     mediaQueryBreakPoints: {
@@ -102,6 +103,7 @@ export const testimonialMessage: IT.ITypography = {
   lineHeight: '24px',
   display: 'block',
   color: '#2A2A2D',
+  scrollAnimate: 'fadeIn',
   mediaQueryBreakPoints: {
     [size.tabletS]: {
       maxWidth: '500px',
@@ -115,7 +117,7 @@ export const wrapperNavigation: IC.IContainer = {
     gap: '2em',
     alignItems: 'flex-end',
     justifyContent: 'space-between',
-    marginTop: '1em',
+    marginTop: '1.5em',
     mediaQueryBreakPoints: {
       [size.tabletS]: {
         justifyContent: 'unset',
