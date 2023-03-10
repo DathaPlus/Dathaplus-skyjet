@@ -1,27 +1,17 @@
-import React, {Fragment} from 'react';
-import Form from "@components/form";
-import {NavbarMenu} from "@components/hero/header";
-import {Container, Text} from "@dathaplus/storybook";
-import {
-  leftContainerStyle,
-  mainContainerStyle,
-  rightContainerStyle,
-  textOurServicesStyle,
-  textRequestFlightStyle
-} from "@components/testForm";
+import Form from '@components/form';
+import { Header } from '@components/header';
+import { NavbarMenu } from '@components/hero/header';
+import { rightContainerStyle } from '@components/testForm';
+import { Container } from '@dathaplus/storybook';
+import React, { Fragment } from 'react';
 
 export const FormPage = () => {
   return (
     <Fragment>
-      <NavbarMenu img="logo2.webp"/>
-      <Container {...mainContainerStyle}>
-        <Container {...leftContainerStyle}>
-          <Text {...textOurServicesStyle}>OUR SERVICE</Text>
-          <Text {...textRequestFlightStyle}>Request Flight Quote</Text>
-        </Container>
-        <Container {...rightContainerStyle}>
-          <Form/>
-        </Container>
+      <NavbarMenu img="logo2.webp" />
+      <Container {...rightContainerStyle}>
+        <Header title="our service" subtitle="Request Flight Quote" direction="vertical" />
+        <Form />
       </Container>
     </Fragment>
   );
