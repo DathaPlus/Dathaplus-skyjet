@@ -1,6 +1,6 @@
 import { Header } from '@components/header';
-import { NavbarMenu } from '@components/hero/header';
 import { InfoText } from '@components/infoText';
+import { NavbarMenu } from '@components/navbar';
 import {
   BodyAircraftManagement,
   SectionAircraftManagement,

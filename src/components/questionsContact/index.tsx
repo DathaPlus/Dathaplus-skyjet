@@ -1,4 +1,3 @@
-import { descriptionStyles } from '@components/card/styles';
 import {
   childContainerStyle,
   mainContainerStyle,

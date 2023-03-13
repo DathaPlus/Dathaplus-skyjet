@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 import type { GatsbyConfig } from 'gatsby';
+
 const { resolve } = require('path');
 
 const __src = resolve(__dirname, 'src');
@@ -23,6 +24,7 @@ const config: GatsbyConfig = {
           '@helpers': resolve(__src, 'helpers'),
           '@hooks': resolve(__src, 'hooks'),
           '@interfaces': resolve(__src, 'interfaces'),
+          '@validations': resolve(__src, 'validations'),
         },
         extensions: ['js', 'jsx', 'ts', 'tsx'],
       },
