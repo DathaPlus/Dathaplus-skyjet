@@ -3,24 +3,27 @@ import { containerForm, containerState, inputForm, selectForm } from '@component
 import { Button, Container, InputField, SelectField, Text } from '@dathaplus/storybook';
 import useMobile from '@hooks/useMobile';
 import { sendEmailForm } from '@utils/sendEmail';
-import { Formik } from 'formik';
+import { formValidationScheme } from '@validations/form';
+import { ErrorMessage, Formik } from 'formik';
 import React from 'react';
 
 export const Form = () => {
   const { mobile } = useMobile();
+  const init = {
+    full_name: '',
+    email: '',
+    phone: '',
+    address: '',
+    city: '',
+    state: '',
+    zip_code: '',
+    itinerary: '',
+  };
 
   return (
     <Formik
-      initialValues={{
-        full_name: '',
-        email: '',
-        phone: '',
-        address: '',
-        city: '',
-        state: '',
-        zip_code: '',
-        itinerary: '',
-      }}
+      initialValues={init}
+      validationSchema={formValidationScheme}
       onSubmit={async (values, formikHelpers) => {
         await sendEmailForm(values);
         formikHelpers.resetForm();
@@ -47,14 +50,31 @@ export const Form = () => {
               onChange={handleChange}
               required
             />
-            <InputField
-              {...inputForm}
-              placeholder="Email"
-              name="email"
-              value={values.email}
-              onChange={handleChange}
-              required
-            />
+            <Container>
+              <InputField
+                {...inputForm}
+                placeholder="Email"
+                name="email"
+                value={values.email}
+                onChange={handleChange}
+                required
+              />
+              <ErrorMessage
+                name="email"
+                render={(msg) => (
+                  <Text
+                    fontFamily="Inter"
+                    fontSize="11px"
+                    lineHeight="unset"
+                    color="#ff3333"
+                    padding="0 1em"
+                  >
+                    {msg}
+                  </Text>
+                )}
+              />
+            </Container>
+
             <InputField
               {...inputForm}
               placeholder="Phone"
@@ -63,6 +83,7 @@ export const Form = () => {
               onChange={handleChange}
               required
             />
+
             <InputField
               {...inputForm}
               placeholder="Address"
@@ -71,6 +92,7 @@ export const Form = () => {
               onChange={handleChange}
               required
             />
+
             <Container {...containerState}>
               <InputField
                 {...inputForm}
