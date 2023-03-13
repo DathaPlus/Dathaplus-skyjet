@@ -8,7 +8,7 @@ import React, { Fragment } from 'react';
 export const FormPage = () => {
   return (
     <Fragment>
-      <NavbarMenu img="logo2.webp" />
+      <NavbarMenu img="logo2.webp" color="black" colorClientsLogin="#A8987E" />
       <Container {...rightContainerStyle}>
         <Header title="our service" subtitle="Request Flight Quote" direction="vertical" />
         <Form />

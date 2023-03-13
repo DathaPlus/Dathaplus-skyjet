@@ -36,6 +36,8 @@ jobs:
         run: yarn --ignore-scripts --frozen-lockfile
       - name: Build
         run: yarn build
+      - name: Add endpoints to public folder
+        run: cp -R /api ./public/
       - name: Deploy Action FTP
         uses: SamKirkland/FTP-Deploy-Action@4.2.0
         with:

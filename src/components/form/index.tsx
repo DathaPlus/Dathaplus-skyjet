@@ -4,6 +4,7 @@ import { Button, Container, InputField, SelectField, Text } from '@dathaplus/sto
 import useMobile from '@hooks/useMobile';
 import { Formik } from 'formik';
 import React from 'react';
+import {sendEmailForm} from "@utils/sendEmail";
 
 export const Form = () => {
   const { mobile } = useMobile();
@@ -20,9 +21,8 @@ export const Form = () => {
         zip_code: '',
         itinerary: '',
       }}
-      onSubmit={(values) => {
-        // eslint-disable-next-line no-console
-        console.log('submit values: ', values);
+      onSubmit={async (values) => {
+        await sendEmailForm(values);
       }}
     >
       {({ handleSubmit, values, handleChange }) => (
@@ -44,6 +44,7 @@ export const Form = () => {
               name="full_name"
               value={values.full_name}
               onChange={handleChange}
+              required
             />
             <InputField
               {...inputForm}
@@ -51,6 +52,7 @@ export const Form = () => {
               name="email"
               value={values.email}
               onChange={handleChange}
+              required
             />
             <InputField
               {...inputForm}
@@ -58,6 +60,7 @@ export const Form = () => {
               name="phone"
               value={values.phone}
               onChange={handleChange}
+              required
             />
             <InputField
               {...inputForm}
@@ -65,6 +68,7 @@ export const Form = () => {
               name="address"
               value={values.address}
               onChange={handleChange}
+              required
             />
             <Container {...containerState}>
               <InputField
@@ -74,6 +78,7 @@ export const Form = () => {
                 name="city"
                 value={values.city}
                 onChange={handleChange}
+                required
               />
               <SelectField
                 {...selectForm}
@@ -81,6 +86,7 @@ export const Form = () => {
                 name="state"
                 defaultValue={values.state}
                 onChange={handleChange}
+                required
               >
                 <option value="" disabled>
                   State
@@ -96,6 +102,7 @@ export const Form = () => {
                 name="zip_code"
                 value={values.zip_code}
                 onChange={handleChange}
+                required
               />
             </Container>
             <InputField
@@ -104,6 +111,7 @@ export const Form = () => {
               name="itinerary"
               value={values.itinerary}
               onChange={handleChange}
+              required
             />
             <Button actions={{ type: 'submit' }} styles={{ borderRadius: '0' }}>
               <b>Submit</b>

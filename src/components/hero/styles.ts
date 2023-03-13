@@ -71,7 +71,7 @@ export const bodyDescription: IT.ITypography = {
 
 //----------------NAVBAR-------------------------//
 
-export const textOption: Omit<IT.ITypography, 'children'> = {
+export const textOption = ({color = 'white'}): Omit<IT.ITypography, 'children'> => ({
   fontFamily: 'Inter',
   variant: 'body4',
   textTransform: 'uppercase',
@@ -79,10 +79,10 @@ export const textOption: Omit<IT.ITypography, 'children'> = {
   mediaQueryBreakPoints: {
     [size.tabletL]: {
       fontWeight: 400,
-      color: 'black',
+      color,
     },
   },
-};
+});
 
 export const textOptionNested: Omit<IT.ITypography, 'children'> = {
   fontFamily: 'Inter',
@@ -91,12 +91,12 @@ export const textOptionNested: Omit<IT.ITypography, 'children'> = {
   fontWeight: 400,
 };
 
-export const textOptionButton: Omit<IT.ITypography, 'children'> = {
+export const textOptionButton = ({color = 'white'}): Omit<IT.ITypography, 'children'> => ({
   ...textOptionNested,
   variant: 'body4',
   mediaQueryBreakPoints: {
     [size.tabletL]: {
-      color: 'black !important',
+      color: `${color} !important`,
     },
   },
-};
+});
