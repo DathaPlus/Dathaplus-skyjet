@@ -9,13 +9,14 @@ export const mainContainer = ({ direction }: Pick<IHeader, 'direction'>): IC.ICo
   styles: {
     backgroundColor: direction === 'horizontal' ? '#F5F3F1' : '#E4DFD7',
     width: '100%',
-    height: direction === 'horizontal' ? '450px' : '803px',
+    height: '450px',
     padding: '1.5em',
     display: 'flex',
     alignItems: 'center',
     mediaQueryBreakPoints: {
       [size.tabletL]: {
         width: direction === 'horizontal' ? '100%' : '50%',
+        height: direction === 'horizontal' ? '450px' : '803px',
       },
     },
   },
