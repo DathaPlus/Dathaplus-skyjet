@@ -14,6 +14,7 @@ import {
   wrapperInfoImage,
   wrapperInfoImg,
 } from '@components/sectionaircraftmanagement/style';
+import { SEO } from '@components/seo';
 import { Container, ContainerWrapper, Image, Section, Text } from '@dathaplus/storybook';
 import { aircraftSectionImg, aircraftSectionsBodyManagement } from '@helpers/aircraft';
 import React from 'react';
@@ -55,5 +56,11 @@ const AircraftManagement = () => {
     </>
   );
 };
+
+export const Head = () => (
+  <SEO title="Aircraft Management">
+    <meta name="description" content="aircraft management" />
+  </SEO>
+);
 
 export default AircraftManagement;
