@@ -1,9 +1,9 @@
 //---------------HERO--------------------//
-
 import {
-  IHeroInterfaces as IH,
-  IContainerInterfaces as IC,
   IButtonInterfaces as IB,
+  IContainerInterfaces as IC,
+  IHeroInterfaces as IH,
+  IImageInterfaces as IM,
   ITypogragpyInterfaces as IT,
   size,
 } from '@dathaplus/storybook';
@@ -40,6 +40,13 @@ export const bodyButton: IB.IButton = {
   },
 };
 
+export const textBodyButton: IT.ITypography = {
+  textTransform: 'uppercase',
+  fontFamily: 'Inter',
+  fontWeight: 600,
+  fontSize: '14px',
+};
+
 export const bodyTitle: IT.ITypography = {
   textTransform: 'uppercase',
   color: '#a8987e',
@@ -69,34 +76,20 @@ export const bodyDescription: IT.ITypography = {
   },
 };
 
-//----------------NAVBAR-------------------------//
-
-export const textOption = ({color = 'white'}): Omit<IT.ITypography, 'children'> => ({
-  fontFamily: 'Inter',
-  variant: 'body4',
-  textTransform: 'uppercase',
-  fontWeight: 500,
-  mediaQueryBreakPoints: {
-    [size.tabletL]: {
-      fontWeight: 400,
-      color,
+export const IconScrolled: Omit<IM.IImage, 'src'> = {
+  width: '100%',
+  height: '100%',
+  styles: {
+    maxWidth: 'fit-content',
+    height: 'fit-content',
+    display: 'block',
+    margin: '3em 0 0',
+    objectFit: 'contain',
+    objectPosition: 'center',
+    mediaQueryBreakPoints: {
+      600: {
+        display: 'none',
+      } as any,
     },
   },
-});
-
-export const textOptionNested: Omit<IT.ITypography, 'children'> = {
-  fontFamily: 'Inter',
-  variant: 'caption2',
-  textTransform: 'uppercase',
-  fontWeight: 400,
 };
-
-export const textOptionButton = ({color = 'white'}): Omit<IT.ITypography, 'children'> => ({
-  ...textOptionNested,
-  variant: 'body4',
-  mediaQueryBreakPoints: {
-    [size.tabletL]: {
-      color: `${color} !important`,
-    },
-  },
-});

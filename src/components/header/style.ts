@@ -37,9 +37,15 @@ export const wrapperText = ({ direction }: Pick<IHeader, 'direction'>): IC.ICont
         alignItems: direction === 'horizontal' ? 'center' : undefined,
         marginLeft: '18%',
       },
-      [size.desktopS]: {
+      [size.laptopL]: {
         marginLeft: '22%',
       },
+      [size.desktopM]:
+        direction === 'vertical'
+          ? {
+              marginLeft: '42%',
+            }
+          : {},
     },
   },
 });

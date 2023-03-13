@@ -1,7 +1,7 @@
 import { Card } from '@components/card';
 import { Certification } from '@components/certification';
 import { Header } from '@components/header';
-import { NavbarMenu } from '@components/hero/header';
+import { NavbarMenu } from '@components/navbar';
 import { OurValues } from '@components/ourValues';
 import { PartnerTestimonial } from '@components/partnerTestimonial';
 import { AirplaneSection } from '@components/sectionAirplane';

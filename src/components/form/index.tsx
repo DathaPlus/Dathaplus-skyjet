@@ -2,9 +2,9 @@
 import { containerForm, containerState, inputForm, selectForm } from '@components/form/style';
 import { Button, Container, InputField, SelectField, Text } from '@dathaplus/storybook';
 import useMobile from '@hooks/useMobile';
+import { sendEmailForm } from '@utils/sendEmail';
 import { Formik } from 'formik';
 import React from 'react';
-import {sendEmailForm} from "@utils/sendEmail";
 
 export const Form = () => {
   const { mobile } = useMobile();
