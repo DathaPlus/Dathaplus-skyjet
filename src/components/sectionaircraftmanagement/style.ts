@@ -156,6 +156,7 @@ export const sectionAircraftTitle: IT.ITypography = {
   width: '327px',
   color: '#2A2A2D',
   paddingBottom: '20px',
+  scrollAnimate: 'fadeInRight',
   mediaQueryBreakPoints: {
     770: {
       fontSize: '48px',
@@ -166,6 +167,9 @@ export const sectionAircraftTitle: IT.ITypography = {
 };
 
 export const sectionAircraftMainImg: IM.IImage = {
+  width: '100%',
+  height: '100%',
+  scrollAnimate: 'fadeIn',
   styles: {
     width: '375px',
     mediaQueryBreakPoints: {
@@ -191,7 +195,7 @@ export const mainTitleLeft: IT.ITypography = {
   lineHeight: '30px',
   color: '#2A2A2D',
   tag: 'p',
-  scrollAnimate: 'fadeInDown',
+  entranceAnimate: 'fadeInDown',
   padding: '24px',
   mediaQueryBreakPoints: {
     400: {
@@ -211,7 +215,7 @@ export const mainTitleRight: IT.ITypography = {
   lineHeight: '30px',
   color: '#2A2A2D',
   tag: 'p',
-  scrollAnimate: 'fadeInDown',
+  entranceAnimate: 'fadeInDown',
   padding: '24px',
   mediaQueryBreakPoints: {
     400: {},

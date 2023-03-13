@@ -27,6 +27,7 @@ export const titleStyles: IT.ITypography = {
   fontSize: '32px',
   lineHeight: '39px',
   color: '#2A2A2D',
+  scrollAnimate: 'fadeInUp',
   paddingBottom: '20px',
   mediaQueryBreakPoints: {
     770: {
