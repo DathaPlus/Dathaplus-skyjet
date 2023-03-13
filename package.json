@@ -23,11 +23,13 @@
     "format": "prettier -w  \"./**/*.{ts,js,json,yml,yaml}\" --config ./.prettierrc"
   },
   "dependencies": {
-    "@dathaplus/storybook": "^0.14.73-alpha.65",
+    "@dathaplus/storybook": "0.17.29",
+    "formik": "^2.2.9",
     "gatsby": "^5.7.0",
     "gatsby-plugin-alias-imports": "^1.0.5",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "yup": "^1.0.2"
   },
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.21.0",

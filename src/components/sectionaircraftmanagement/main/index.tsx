@@ -1,4 +1,4 @@
-import { Container, ContainerWrapper, Image, Text } from '@dathaplus/storybook';
+import {Container, ContainerWrapper, Image, Section, Text} from '@dathaplus/storybook';
 import { ISectionAircraftManagement } from '@interfaces/sectionaircraftmanagement';
 import React, { FC } from 'react';
 
@@ -10,9 +10,10 @@ import {
   mainContainer4,
   textInfo,
   textTitle,
-} from './style';
+} from '../style';
 
-const SectionAircraftManagement: FC<ISectionAircraftManagement> = ({ image, title, info }) => (
+export const SectionAircraftManagement: FC<ISectionAircraftManagement> = ({ image, title, info }) => (
+
   <ContainerWrapper>
     <Container {...mainContainer}>
       <Container {...mainContainer2}>
@@ -21,7 +22,6 @@ const SectionAircraftManagement: FC<ISectionAircraftManagement> = ({ image, titl
           <Text {...textTitle}>{title}</Text>
         </Container>
       </Container>
-
       <Container {...mainContainer4}>
         <Text {...textInfo}>{info}</Text>
       </Container>
@@ -29,4 +29,3 @@ const SectionAircraftManagement: FC<ISectionAircraftManagement> = ({ image, titl
   </ContainerWrapper>
 );
 
-export default SectionAircraftManagement;

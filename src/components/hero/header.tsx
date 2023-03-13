@@ -6,9 +6,13 @@ import { textOption, textOptionButton, textOptionNested } from './styles';
 export const NavbarMenu = ({
   img = 'logo1.webp',
   activateColorInTop,
+  color = 'white',
+  colorClientsLogin = 'white',
 }: {
   img?: string;
   activateColorInTop?: boolean;
+  color?: string;
+  colorClientsLogin?: string;
 }) => (
   <Navbar
     logo={{
@@ -22,7 +26,7 @@ export const NavbarMenu = ({
     activateColorInTop={activateColorInTop}
     options={[
       {
-        ...textOption,
+        ...textOption({color}),
         children: 'about us',
         type: 'text',
         href: '/about',
@@ -41,20 +45,20 @@ export const NavbarMenu = ({
         ],
       },
       {
-        ...textOption,
+        ...textOption({color}),
         type: 'text',
         children: 'Maintenance',
         href: '/maintenance',
       },
       {
-        ...textOption,
+        ...textOption({color}),
         type: 'text',
         children: 'contact us',
         href: '/contact',
       },
       {
         type: 'button',
-        children: <Text {...textOptionButton}>Clients login</Text>,
+        children: <Text {...textOptionButton({color: colorClientsLogin})}>Clients login</Text>,
         styles: {
           width: '100%',
           borderRadius: 0,
@@ -65,7 +69,7 @@ export const NavbarMenu = ({
       {
         type: 'button',
         children: (
-          <Text {...textOptionButton} fontWeight={600}>
+          <Text {...textOptionButton({})} fontWeight={600}>
             Request a quote
           </Text>
         ),

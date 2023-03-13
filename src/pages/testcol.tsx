@@ -1,5 +1,5 @@
 import React from 'react';
-import SectionAircraftManagement from '@components/sectionaircraftmanagement';
+import SectionAircraftManagement from '@components/sectionaircraftmanagement/main';
 
 const TestColum = () => {
   return (

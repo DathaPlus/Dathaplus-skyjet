@@ -1,4 +1,4 @@
-import { IContainerInterfaces as IC, ITypogragpyInterfaces } from '@dathaplus/storybook';
+import {IContainerInterfaces as IC, ITypogragpyInterfaces, size} from '@dathaplus/storybook';
 import { IImage } from '@dathaplus/storybook/dist/interfaces/base/img';
 import { IContainer } from '@dathaplus/storybook/dist/interfaces/layout/container';
 
@@ -109,11 +109,11 @@ export const textInfo: ITypogragpyInterfaces.ITypography = {
   maxWidth: '445px',
   mediaQueryBreakPoints: {
     500: {
-      borderBottom: 'solid #F5F3F1 1px',
+
       padding: '25px',
     },
     1000: {
-      borderBottom: 'unset',
+
       padding: '15px',
     },
   },
@@ -127,3 +127,20 @@ export const containerUno: IContainer = {
     alignContent: 'center',
   },
 };
+
+export const infoText: ITypogragpyInterfaces.ITypography = {
+  fontFamily:  'Inter',
+  fontWeight:  '400px',
+  fontSize:  '16px',
+  lineHeight:  '24px',
+  color: '#2A2A2D',
+  display:  'block',
+  width:  '100%',
+  tag:  'p',
+  mediaQueryBreakPoints: {
+  770 : {
+    fontSize: '16px',
+
+  }
+}
+}
