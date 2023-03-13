@@ -21,8 +21,9 @@ export const Form = () => {
         zip_code: '',
         itinerary: '',
       }}
-      onSubmit={async (values) => {
+      onSubmit={async (values, formikHelpers) => {
         await sendEmailForm(values);
+        formikHelpers.resetForm();
       }}
     >
       {({ handleSubmit, values, handleChange }) => (
