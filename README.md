@@ -5,7 +5,7 @@
 </p>
 <h1 align="center">
   Gatsby Minimal TypeScript Starter
-</h1>.
+</h1>
 
 ## 🚀 Quick start
 

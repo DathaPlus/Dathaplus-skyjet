@@ -153,9 +153,10 @@ export const sectionAircraftTitle: IT.ITypography = {
   fontWeight: '300px',
   fontSize: '32px',
   lineHeight: '39px',
-  width: '327px',
+  width: '100%',
+  maxWidth: '327px',
   color: '#2A2A2D',
-  paddingBottom: '20px',
+  padding: '0 20px 20px 20px',
   scrollAnimate: 'fadeInRight',
   mediaQueryBreakPoints: {
     770: {
@@ -170,14 +171,7 @@ export const sectionAircraftMainImg: IM.IImage = {
   width: '100%',
   height: '100%',
   scrollAnimate: 'fadeIn',
-  styles: {
-    width: '375px',
-    mediaQueryBreakPoints: {
-      770: {
-        width: '100%',
-      },
-    },
-  },
+
 };
 
 export const wrapperInfoImage: IC.IContainer = {

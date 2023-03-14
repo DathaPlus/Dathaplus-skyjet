@@ -66,10 +66,18 @@ export const infoStyles: IT.ITypography = {
   fontFamily: 'Inter',
   fontWeight: 300,
   textAlign: 'left',
-  fontSize: '48px',
+  fontSize: '35px',
   lineHeight: '58px',
   color: '#2A2A2D',
   display: 'block',
+  width: '100%',
   maxWidth: '400px',
+  whiteSpace: "pre-wrap",
   entranceAnimate: 'fadeInDown',
+  mediaQueryBreakPoints: {
+    375: {
+      fontSize: '48px',
+      whiteSpace: 'unset',
+    }
+  }
 };

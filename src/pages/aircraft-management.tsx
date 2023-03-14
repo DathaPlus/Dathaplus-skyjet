@@ -79,8 +79,9 @@ const AircraftManagement = () => {
               fontWeight="300px"
               fontSize="20px"
               lineHeight="30px"
-              width="327px"
+              width="100%"
               color={'#2A2A2D'}
+              padding= '0 15px'
               mediaQueryBreakPoints={{
                 770: {
                   fontSize: '28px',
@@ -106,11 +107,6 @@ const AircraftManagement = () => {
             <Image
               styles={{
                 width: '100%',
-                mediaQueryBreakPoints: {
-                  770: {
-                    maxWidth: '375px',
-                  },
-                },
               }}
               src={'/img/Rectangle24.webp'}
             />
