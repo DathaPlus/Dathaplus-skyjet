@@ -1,7 +1,7 @@
 import { Navbar, Text } from '@dathaplus/storybook';
 import React from 'react';
 
-import { textOption, textOptionButton, textOptionNested } from './styles';
+import { textOption, textOptionButton, textOptionNested } from './style';
 
 export const NavbarMenu = ({
   img = 'logo1.webp',
@@ -26,15 +26,15 @@ export const NavbarMenu = ({
     activateColorInTop={activateColorInTop}
     options={[
       {
-        ...textOption({color}),
+        ...textOption({ color }),
         children: 'about us',
         type: 'text',
-        href: '/about',
         options: [
           {
             ...textOptionNested,
             type: 'text',
             children: 'aircraft management',
+            href: '/aircraft-management',
           },
           {
             ...textOptionNested,
@@ -45,20 +45,19 @@ export const NavbarMenu = ({
         ],
       },
       {
-        ...textOption({color}),
+        ...textOption({ color }),
         type: 'text',
         children: 'Maintenance',
-        href: '/maintenance',
       },
       {
-        ...textOption({color}),
+        ...textOption({ color }),
         type: 'text',
         children: 'contact us',
         href: '/contact',
       },
       {
         type: 'button',
-        children: <Text {...textOptionButton({color: colorClientsLogin})}>Clients login</Text>,
+        children: <Text {...textOptionButton({ color: colorClientsLogin })}>Clients login</Text>,
         styles: {
           width: '100%',
           borderRadius: 0,
@@ -68,6 +67,11 @@ export const NavbarMenu = ({
       },
       {
         type: 'button',
+        actions: {
+          onClick: () => {
+            window?.open('/form', '_self');
+          },
+        },
         children: (
           <Text {...textOptionButton({})} fontWeight={600}>
             Request a quote

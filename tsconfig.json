@@ -11,7 +11,8 @@
       "@utils/*": ["utils/*"],
       "@helpers/*": ["helpers/*"],
       "@hooks/*": ["hooks/*"],
-      "@interfaces/*": ["interfaces/*"]
+      "@interfaces/*": ["interfaces/*"],
+      "@validations/*": ["validations/*"]
     },
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,

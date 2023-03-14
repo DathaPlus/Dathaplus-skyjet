@@ -1,6 +1,6 @@
 import Form from '@components/form';
 import { Header } from '@components/header';
-import { NavbarMenu } from '@components/hero/header';
+import { NavbarMenu } from '@components/navbar';
 import { rightContainerStyle } from '@components/testForm';
 import { Container } from '@dathaplus/storybook';
 import React, { Fragment } from 'react';

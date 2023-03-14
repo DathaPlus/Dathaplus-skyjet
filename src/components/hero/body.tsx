@@ -1,6 +1,14 @@
+import { Button, Container, Image, Text } from '@dathaplus/storybook';
 import React from 'react';
-import { Button, Container, Text } from '@dathaplus/storybook';
-import { bodyButton, bodyContainer, bodyDescription, bodyTitle } from './styles';
+
+import {
+  IconScrolled,
+  bodyButton,
+  bodyContainer,
+  bodyDescription,
+  bodyTitle,
+  textBodyButton,
+} from './styles';
 
 export const BodyHero = () => {
   return (
@@ -10,10 +18,11 @@ export const BodyHero = () => {
         <Text {...bodyDescription}>private</Text>
         <Text {...bodyDescription}>jet charter</Text>
       </Container>
-
       <Button {...bodyButton}>
-        <Text textTransform="uppercase">Book a flight</Text>
+        <Text {...textBodyButton}>Book a flight</Text>
       </Button>
+
+      <Image {...IconScrolled} src="/img/scroll.webp" />
     </Container>
   );
 };

@@ -8,3 +8,8 @@ require('./node_modules/@dathaplus/storybook/dist/styles/fonts.min.css');
 exports.wrapRootElement = ({ element, props }) => {
   return <MainLayout {...props}>{element}</MainLayout>;
 };
+
+exports.shouldUpdateScroll = () => {
+  window.scrollTo(0, 0);
+  return false;
+};
