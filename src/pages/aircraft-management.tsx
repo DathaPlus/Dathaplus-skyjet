@@ -94,65 +94,6 @@ const AircraftManagement = () => {
             'Should you choose to have your aircraft conduct charter operations, our sales team is highly experienced and will ensure that each aircraft movement optimizes revenue generation.'
           }
         />
-
-        <SectionAircraftManagement
-          image="/img/Rectangle1.webp"
-          title={'High-End Charter Marketing'}
-          info={
-            <>
-              <Text
-                fontFamily="Inter"
-                fontWeight="400px"
-                fontSize="16px"
-                lineHeight="24px"
-                color={'#2A2A2D'}
-                display="block"
-                width="100%"
-                tag="p"
-                mediaQueryBreakPoints={{
-                  770: {
-                    fontSize: '16px',
-                  },
-                }}
-              >
-                No matter if you{"'"}re traveling for business or pleasure, SkyJet Elite can handle
-                every aspect of your trip. Car service, dinner, hotels, you name it, all can be
-                handled by SkyJet Elite{"'"}s Private Travel Concierge. Our travel professionals are
-                experienced and will ensure that you receive only the best service every time. To
-                put a travel concierge to work for you, call XXX-XXX-XXX or email{' '}
-                <a href="">reservations@skyjetselite.com</a>
-                Experience unrivaled service and exceptional value with SkyJet Elite’s world-class
-                Private Air Charter flights. Forget the headaches of commercial air travel—let
-                SkyJet Elite create a customized aircraft charter solution just for you. Travel in
-                safety and luxury anywhere on your schedule, and trust SkyJet Elite to take care of
-                every detail.
-              </Text>
-              <br />
-              <Text
-                fontFamily="Inter"
-                fontWeight="400px"
-                fontSize="16px"
-                lineHeight="24px"
-                color={'#2A2A2D'}
-                display="block"
-                width="100%"
-                tag="p"
-                mediaQueryBreakPoints={{
-                  770: {
-                    fontSize: '16px',
-                  },
-                }}
-              >
-                Whether you have meetings in three cities on the same day, or you want to surprise
-                your family with a last-minute vacation, SkyJet Elite will deliver you an unmatched
-                charter experience. In as little as 3 hours’ notice, SkyJet Elite will have your
-                ideal aircraft staffed and ready to fly. We anticipate your needs and pay careful
-                attention to every detail of your flight. Our mission is to provide you with the
-                safest, most thoughtful and professional service in private travel.
-              </Text>
-            </>
-          }
-        />
       </div>
 
       <Section padding="0" alignItems="center" backgroundColor={'#F5F3F1'}>
@@ -179,10 +120,10 @@ const AircraftManagement = () => {
           >
             <Image
               styles={{
-                width: '375px',
+                width: '100%',
                 mediaQueryBreakPoints: {
                   770: {
-                    width: '100%',
+                    maxWidth: '375px',
                   },
                 },
               }}
@@ -219,10 +160,22 @@ const AircraftManagement = () => {
           title={'Concierge'}
           info={
             <Text {...infoText}>
-              Experience unrivaled service and exceptional value with SkyJet Elite’s world-class
-              Private Air Charter flights. Forget the headaches of commercial air travel—let SkyJet
-              Elite create a customized aircraft charter solution just for you. Travel in safety and
-              luxury anywhere on your schedule, and trust SkyJet Elite to take care of every detail.
+              No matter if you{"'"}re traveling for business or pleasure, SkyJet Elite can handle
+              every aspect of your trip. Car service, dinner, hotels, you name it, all can be
+              handled by SkyJet Elite{"'"}s Private Travel Concierge. Our travel professionals are
+              experienced and will ensure that you receive only the best service every time. To put
+              a travel concierge to work for you, call XXX-XXX-XXX or email{' '}
+              <LinkComponent
+                text={{
+                  children: 'reservations@skyjetselite.com',
+                  color: '#2F7ABF',
+                  fontFamily: 'Inter',
+                  fontWeight: '400px',
+                  fontSize: '16px',
+                  lineHeight: '24px',
+                }}
+                href="https://www.google.com"
+              />
             </Text>
           }
         ></BodyAircraftManagement>
@@ -232,22 +185,11 @@ const AircraftManagement = () => {
           info={
             <>
               <Text {...infoText}>
-                No matter if you{"'"}re traveling for business or pleasure, SkyJet Elite can handle
-                every aspect of your trip. Car service, dinner, hotels, you name it, all can be
-                handled by SkyJet Elite{"'"}s Private Travel Concierge. Our travel professionals are
-                experienced and will ensure that you receive only the best service every time. To
-                put a travel concierge to work for you, call XXX-XXX-XXX or email{' '}
-                <LinkComponent
-                  text={{
-                    children: 'reservations@skyjetselite.com',
-                    color: '#2F7ABF',
-                    fontFamily: 'Inter',
-                    fontWeight: '400px',
-                    fontSize: '16px',
-                    lineHeight: '24px',
-                  }}
-                  href="https://www.google.com"
-                />
+                Experience unrivaled service and exceptional value with SkyJet Elite’s world-class
+                Private Air Charter flights. Forget the headaches of commercial air travel—let
+                SkyJet Elite create a customized aircraft charter solution just for you. Travel in
+                safety and luxury anywhere on your schedule, and trust SkyJet Elite to take care of
+                every detail.
               </Text>
               <br />
               <Text
@@ -345,6 +287,69 @@ const AircraftManagement = () => {
             </>
           }
         ></BodyAircraftManagement>
+
+        <Container
+          styles={{
+            display: 'flex',
+            flexDirection: 'column-reverse',
+            alignItems: 'center',
+            gap: '20px',
+            paddingBottom: '60px',
+            marginTop: '50px',
+            mediaQueryBreakPoints: {
+              1250: {
+                flexDirection: 'row',
+              },
+            },
+          }}
+        >
+          <div
+            style={{
+              flex: 1,
+            }}
+          >
+            <Text
+              fontFamily="Inter"
+              fontWeight="300px"
+              fontSize="20px"
+              lineHeight="30px"
+              width="327px"
+              color={'#2A2A2D'}
+              mediaQueryBreakPoints={{
+                770: {
+                  fontSize: '28px',
+                  width: '700px',
+                  lineHeight: '42px',
+                },
+                1250: {
+                  padding: '0 10px 0 150px',
+                },
+              }}
+            >
+              We are proudly part of The Atlantis Aviation Group. Hence, our services will be
+              supported by a group of companies. Therefore, if you need an additional request beyond
+              our services, our sister companies will manage it. We will always provide you a
+              solution.
+            </Text>
+          </div>
+          <div
+            style={{
+              flex: 1,
+            }}
+          >
+            <Image
+              styles={{
+                width: '100%',
+                mediaQueryBreakPoints: {
+                  770: {
+                    maxWidth: '375px',
+                  },
+                },
+              }}
+              src={'/img/Rectangle24.webp'}
+            />
+          </div>
+        </Container>
       </Section>
     </>
   );
