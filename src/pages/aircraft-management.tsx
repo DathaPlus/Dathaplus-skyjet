@@ -1,95 +1,126 @@
+import { Header } from '@components/header';
 import { InfoText } from '@components/infoText';
-import SectionAircraftManagement from '@components/sectionaircraftmanagement';
-import { containerUno } from '@components/sectionaircraftmanagement/style';
-import { Container, ContainerWrapper } from '@dathaplus/storybook';
+import { NavbarMenu } from '@components/navbar';
+import {
+  BodyAircraftManagement,
+  SectionAircraftManagement,
+} from '@components/sectionaircraftmanagement';
+import {
+  containerUno,
+  mainTitleLeft,
+  mainTitleRight,
+  sectionAircraftMainImg,
+  sectionAircraftTitle,
+  wrapperInfoImage,
+  wrapperInfoImg,
+} from '@components/sectionaircraftmanagement/style';
+import { SEO } from '@components/seo';
+import { Container, ContainerWrapper, Image, Section, Text } from '@dathaplus/storybook';
+import { aircraftSectionImg, aircraftSectionsBodyManagement } from '@helpers/aircraft';
 import React from 'react';
 
 const AircraftManagement = () => {
   return (
     <>
       <main>
-        <ContainerWrapper>
+        <NavbarMenu img="logo2.webp" activateColorInTop />
+        <Header title="about us" subtitle="Aircraft Management" />
+
+        <ContainerWrapper margin="3em 0">
           <Container {...containerUno}>
-            <InfoText
-              textLeft={{
-                children:
-                  'We offer customized Part 135 (Charter) and Part 91 (Private) aircraft management solutions. SkyJet Elite can maintain the safe operation of your aircraft and generate revenue through our air charter programs by chartering your aircraft, which helps defray the cost of ownership and provide ROI.',
-                fontFamily: 'Inter',
-                fontWeight: 400,
-                fontSize: '18px',
-                lineHeight: '30px',
-                color: '#2A2A2D',
-                tag: 'p',
-                scrollAnimate: 'fadeInDown',
-                padding: '24px',
-                mediaQueryBreakPoints: {
-                  400: {
-                    fontSize: '28px',
-                    lineHeight: '38px',
-                  },
-                },
-              }}
-              textRight={{
-                children:
-                  'SkyJet Elite can handle everything from the initial aircraft acquisition to the management, maintenance, and day-to-day flight operations. If you are interested in offering your aircraft for charter, SkyJet Elite can take care of it all. If you currently own an aircraft or are considering the benefits of aircraft ownership, we are ready to help.\n' +
-                  'SkyJet Elite offers fully customizable solutions for any ownership program you desire. We strongly believe in transparency, professionalism, and safety: all key factors when managing your aircraft.\n',
-                fontFamily: 'Inter',
-                fontWeight: 400,
-                fontSize: '16px',
-                lineHeight: '30px',
-                color: '#2A2A2D',
-                tag: 'p',
-                scrollAnimate: 'fadeInDown',
-                padding: '24px',
-                mediaQueryBreakPoints: {
-                  400: {},
-                },
-              }}
-            />
+            <InfoText textLeft={mainTitleLeft} textRight={mainTitleRight} />
           </Container>
         </ContainerWrapper>
       </main>
+
       <div>
-        <SectionAircraftManagement
-          image="/img/rectangle1.webp"
-          title={'Fiscal Management'}
-          info={
-            'Each aircraft is treated as its business unit with detailed and transparent accounting.'
-          }
-        />
-
-        <SectionAircraftManagement
-          image="/img/rectangle1.webp"
-          title={'Maintenance'}
-          info={
-            'Fully dedicated maintenance group keeps your asset operating efficiently and safely.'
-          }
-        />
-
-        <SectionAircraftManagement
-          image="/img/Rectangle1.webp"
-          title={'Full Owner Services Team'}
-          info={'Providing ‘Single-Point-Contact’ for support and services to our owners.'}
-        />
-
-        <SectionAircraftManagement
-          image="/img/Rectangle1.webp"
-          title={'Flight Coordination'}
-          info={
-            'The Dispatch and Flight Coordination team supports and tracks every flight. Everywhere. Every time.'
-          }
-        />
-
-        <SectionAircraftManagement
-          image="/img/Rectangle1.webp"
-          title={'High-End Charter Marketing'}
-          info={
-            'Should you choose to have your aircraft conduct charter operations, our sales team is highly experienced and will ensure that each aircraft movement optimizes revenue generation.'
-          }
-        />
+        {aircraftSectionImg.map(({ title, img, info }, idx) => (
+          <SectionAircraftManagement key={idx} image={img} title={title} info={info} />
+        ))}
       </div>
+
+      <Section padding="0" alignItems="center" backgroundColor={'#F5F3F1'}>
+        <Container {...wrapperInfoImg}>
+          <Container {...wrapperInfoImage}>
+            <Image src={'/img/Rectangle22.png'} alt="Rectangle22" {...sectionAircraftMainImg} />
+          </Container>
+          <Container {...wrapperInfoImage}>
+            <Text {...sectionAircraftTitle}>Our Private Air Charter Services offers</Text>
+          </Container>
+        </Container>
+
+        {aircraftSectionsBodyManagement.map(({ title, content }, idx) => (
+          <BodyAircraftManagement key={idx} title={title} info={content} />
+        ))}
+
+
+        <Container
+          styles={{
+            display: 'flex',
+            flexDirection: 'column-reverse',
+            alignItems: 'center',
+            gap: '20px',
+            paddingBottom: '60px',
+            marginTop: '50px',
+            mediaQueryBreakPoints: {
+              1250: {
+                flexDirection: 'row',
+              },
+            },
+          }}
+        >
+          <div
+            style={{
+              flex: 1,
+            }}
+          >
+            <Text
+              fontFamily="Inter"
+              fontWeight="300px"
+              fontSize="20px"
+              lineHeight="30px"
+              width="100%"
+              color={'#2A2A2D'}
+              padding= '0 15px'
+              mediaQueryBreakPoints={{
+                770: {
+                  fontSize: '28px',
+                  width: '700px',
+                  lineHeight: '42px',
+                },
+                1250: {
+                  padding: '0 10px 0 150px',
+                },
+              }}
+            >
+              We are proudly part of The Atlantis Aviation Group. Hence, our services will be
+              supported by a group of companies. Therefore, if you need an additional request beyond
+              our services, our sister companies will manage it. We will always provide you a
+              solution.
+            </Text>
+          </div>
+          <div
+            style={{
+              flex: 1,
+            }}
+          >
+            <Image
+              styles={{
+                width: '100%',
+              }}
+              src={'/img/Rectangle24.webp'}
+            />
+          </div>
+        </Container>
+      </Section>
     </>
   );
 };
+
+export const Head = () => (
+  <SEO title="Aircraft Management">
+    <meta name="description" content="aircraft management" />
+  </SEO>
+);
 
 export default AircraftManagement;

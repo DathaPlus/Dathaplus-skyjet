@@ -10,23 +10,24 @@ import {
   mainContainer4,
   textInfo,
   textTitle,
-} from './style';
+} from '../style';
 
-const SectionAircraftManagement: FC<ISectionAircraftManagement> = ({ image, title, info }) => (
+export const SectionAircraftManagement: FC<ISectionAircraftManagement> = ({
+  image,
+  title,
+  info,
+}) => (
   <ContainerWrapper>
     <Container {...mainContainer}>
       <Container {...mainContainer2}>
-        <Image {...imageStyleUno} scrollAnimate="fadeInUp" src={image} />
+        <Image {...imageStyleUno} scrollAnimate="fadeInUp" src={image} alt="sectionAircraft" />
         <Container {...mainContainer3}>
           <Text {...textTitle}>{title}</Text>
         </Container>
       </Container>
-
       <Container {...mainContainer4}>
         <Text {...textInfo}>{info}</Text>
       </Container>
     </Container>
   </ContainerWrapper>
 );
-
-export default SectionAircraftManagement;

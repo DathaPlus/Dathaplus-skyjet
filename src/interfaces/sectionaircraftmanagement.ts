@@ -5,3 +5,5 @@ export interface ISectionAircraftManagement {
   title: ReactNode;
   info: ReactNode;
 }
+
+export type TSectionAircraftManagementBody = Omit <ISectionAircraftManagement,'image'>;
