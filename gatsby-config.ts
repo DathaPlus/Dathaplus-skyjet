@@ -1,7 +1,9 @@
-import type { GatsbyConfig } from "gatsby";
-const { resolve } = require("path");
+/* eslint-disable @typescript-eslint/no-var-requires */
+import type { GatsbyConfig } from 'gatsby';
 
-const __src = resolve(__dirname, "src");
+const { resolve } = require('path');
+
+const __src = resolve(__dirname, 'src');
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -17,13 +19,14 @@ const config: GatsbyConfig = {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
         alias: {
-          "@components": resolve(__src, "components"),
-          "@utils": resolve(__src, "utils"),
-          "@helpers": resolve(__src, "helpers"),
-          "@hooks": resolve(__src, "hooks"),
-          "@interfaces": resolve(__src, "interfaces"),
+          '@components': resolve(__src, 'components'),
+          '@utils': resolve(__src, 'utils'),
+          '@helpers': resolve(__src, 'helpers'),
+          '@hooks': resolve(__src, 'hooks'),
+          '@interfaces': resolve(__src, 'interfaces'),
+          '@validations': resolve(__src, 'validations'),
         },
-        extensions: ["js", "jsx", "ts", "tsx"],
+        extensions: ['js', 'jsx', 'ts', 'tsx'],
       },
     },
   ],

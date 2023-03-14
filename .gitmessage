@@ -15,8 +15,8 @@
 #
 # EJEMPLO:
 #
-# [IS-120]/feat: Mi primer commit
-# [IS-120]/feat@beta: Mi primer commit con prerelease beta
+# [IS-120]/feat: mi primer commit
+# [IS-120]/feat@beta: mi primer commit con prerelease beta
 #
 # No se permiten mas de 100 caracteres para el titulo
 # No se permiten mas de 200 carateres por linea en el cuerpo del asunto.

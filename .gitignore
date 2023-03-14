@@ -1,6 +1,11 @@
 node_modules/
 .cache/
-public
+public/*
+!public/img
 src/gatsby-types.d.ts
 .npmrc
 .sfdx
+public/*
+!public/img
+.idea
+./yarn-error.log
