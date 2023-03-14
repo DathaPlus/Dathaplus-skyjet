@@ -7,6 +7,11 @@ export const ContainerFooter: IContainerInterfaces.IContainer = {
     display: 'flex',
     flexDirection: 'column',
     gap: '1.7em',
+    mediaQueryBreakPoints: {
+      1250: {
+        padding: '3em 0',
+      },
+    },
   },
 };
 

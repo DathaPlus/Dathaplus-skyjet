@@ -42,7 +42,7 @@ const AircraftManagement = () => {
       <Section padding="0" alignItems="center" backgroundColor={'#F5F3F1'}>
         <Container {...wrapperInfoImg}>
           <Container {...wrapperInfoImage}>
-            <Image src={'/img/Rectangle22.png'} alt="Rectangle22" {...sectionAircraftMainImg} />
+            <Image src={'/img/business2.webp'} alt="Rectangle22" {...sectionAircraftMainImg} />
           </Container>
           <Container {...wrapperInfoImage}>
             <Text {...sectionAircraftTitle}>Our Private Air Charter Services offers</Text>
@@ -52,7 +52,6 @@ const AircraftManagement = () => {
         {aircraftSectionsBodyManagement.map(({ title, content }, idx) => (
           <BodyAircraftManagement key={idx} title={title} info={content} />
         ))}
-
 
         <Container
           styles={{
@@ -81,7 +80,7 @@ const AircraftManagement = () => {
               lineHeight="30px"
               width="100%"
               color={'#2A2A2D'}
-              padding= '0 15px'
+              padding="0 15px"
               mediaQueryBreakPoints={{
                 770: {
                   fontSize: '28px',
@@ -108,7 +107,7 @@ const AircraftManagement = () => {
               styles={{
                 width: '100%',
               }}
-              src={'/img/Rectangle24.webp'}
+              src={'/img/plane/aviation.webp'}
             />
           </div>
         </Container>
