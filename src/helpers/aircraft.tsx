@@ -36,10 +36,23 @@ export const aircraftSectionsBodyManagement = [
     title: 'Concierge',
     content: (
       <Text {...infoText}>
-        Experience unrivaled service and exceptional value with SkyJet Elite’s world-class Private
-        Air Charter flights. Forget the headaches of commercial air travel—let SkyJet Elite create a
-        customized aircraft charter solution just for you. Travel in safety and luxury anywhere on
-        your schedule, and trust SkyJet Elite to take care of every detail.
+        No matter if you{"'"}re traveling for business or pleasure, SkyJet Elite can handle every
+        aspect of your trip. Car service, dinner, hotels, you name it, all can be handled by SkyJet
+        Elite{"'"}s Private Travel Concierge. Our travel professionals are experienced and will
+        ensure that you receive only the best service every time. To put a travel concierge to work
+        for you, call XXX-XXX-XXX or email{' '}
+        <LinkComponent
+          text={{
+            children: 'reservations@skyjetselite.com',
+            color: '#2F7ABF',
+            fontFamily: 'Inter',
+            fontWeight: '400px',
+            fontSize: '16px',
+            lineHeight: '24px',
+            display: 'inline',
+          }}
+          href="https://www.google.com"
+        />
       </Text>
     ),
   },
@@ -48,23 +61,10 @@ export const aircraftSectionsBodyManagement = [
     content: (
       <>
         <Text {...infoText}>
-          No matter if you{"'"}re traveling for business or pleasure, SkyJet Elite can handle every
-          aspect of your trip. Car service, dinner, hotels, you name it, all can be handled by
-          SkyJet Elite{"'"}s Private Travel Concierge. Our travel professionals are experienced and
-          will ensure that you receive only the best service every time. To put a travel concierge
-          to work for you, call XXX-XXX-XXX or email{' '}
-          <LinkComponent
-            text={{
-              children: 'reservations@skyjetselite.com',
-              color: '#2F7ABF',
-              fontFamily: 'Inter',
-              fontWeight: '400px',
-              fontSize: '16px',
-              lineHeight: '24px',
-              display: 'inline',
-            }}
-            href="https://www.google.com"
-          />
+          Experience unrivaled service and exceptional value with SkyJet Elite’s world-class Private
+          Air Charter flights. Forget the headaches of commercial air travel—let SkyJet Elite create
+          a customized aircraft charter solution just for you. Travel in safety and luxury anywhere
+          on your schedule, and trust SkyJet Elite to take care of every detail.
         </Text>
         <br />
         <Text {...sectionAircraftDesc}>
