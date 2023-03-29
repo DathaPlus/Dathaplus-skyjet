@@ -58,6 +58,7 @@ export const bodyTitle: IT.ITypography = {
 };
 
 export const bodyDescription: IT.ITypography = {
+  fontFamily: 'Antonio',
   textAlign: 'center',
   textTransform: 'uppercase',
   fontSize: '28px',
